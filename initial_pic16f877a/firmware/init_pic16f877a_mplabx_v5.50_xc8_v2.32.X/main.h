@@ -5,9 +5,11 @@
  * Last Update: 2022/01/25
  */
 
-#ifndef GLOBALS_H
-#define	GLOBALS_H
-#endif	/* GLOBALS_H */
+// DEFINE ".h" JUST ONE TIME
+
+#ifndef MAIN_H
+#define	MAIN_H
+#endif	/* MAIN_H */
 
 // CONFIGURATION BITS
 
@@ -19,6 +21,8 @@
 #pragma config CPD = OFF        // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
 #pragma config WRT = OFF        // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
 #pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+
+// Another way: #pragma config WDTE = ON, FOSC = XT, CPD = ON, ...
 
 // CONSTANTS
 

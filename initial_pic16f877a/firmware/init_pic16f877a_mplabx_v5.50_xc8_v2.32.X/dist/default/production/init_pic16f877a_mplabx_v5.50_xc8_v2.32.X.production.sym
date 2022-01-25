@@ -96,7 +96,7 @@ cinit FF8 FFF CODE FF8 0
 maintext FF0 FF7 CODE FF0 0
 %locals
 dist/default/production\init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-C:\Users\david\AppData\Local\Temp\xcAsj98.s
+C:\Users\david\AppData\Local\Temp\xcAsju0.s
 348 7FC 0 CODE 0
 351 7FC 0 CODE 0
 357 7FC 0 CODE 0

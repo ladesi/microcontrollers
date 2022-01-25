@@ -6,7 +6,8 @@ Small projects with microcontrollers and peripherals
 - Initial (Hello World)
 - C Coding (PIC XC8 Compiler)
 - Digital IO (Button and Led)
-- External Interrupt
+- External Interruption (on edge)
+- PortB Interruption (on change)
 - 7 Segment Display
 - Relay and Timer 0 (with interrupt)
 - Relay and Timer 0 (without interrupt)

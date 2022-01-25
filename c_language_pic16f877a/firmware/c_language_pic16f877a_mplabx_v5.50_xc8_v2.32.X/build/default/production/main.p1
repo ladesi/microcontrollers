@@ -1,4 +1,15 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"45 ./main.h
+[; ;./main.h: 45:  {
+[s S96 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S96 . bit0 bit1 bit2 bit3 bit4 bit5 bit6 bit7 ]
+"43
+[; ;./main.h: 43: {
+[u S95 `S96 1 `uc 1 ]
+[n S95 . bits byte ]
+"31 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v ___nop `(v ~T0 @X0 0 ef ]
+[p i ___nop ]
 [p mainexit ]
 "54 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 54: __asm("INDF equ 00h");
@@ -180,47 +191,313 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"16 ./main.h
+"20 ./main.h
 [p x FOSC  =  HS         ]
-"17
-[p x WDTE  =  OFF        ]
-"18
-[p x PWRTE  =  ON        ]
-"19
-[p x BOREN  =  ON        ]
-"20
-[p x LVP  =  ON          ]
 "21
-[p x CPD  =  OFF         ]
+[p x WDTE  =  OFF        ]
 "22
-[p x WRT  =  OFF         ]
+[p x PWRTE  =  ON        ]
 "23
+[p x BOREN  =  ON        ]
+"24
+[p x LVP  =  ON          ]
+"25
+[p x CPD  =  OFF         ]
+"26
+[p x WRT  =  OFF         ]
+"27
 [p x CP  =  OFF          ]
-[v $root$_main `(v ~T0 @X0 0 e ]
+"59
+[; ;./main.h: 59: generic_byte var1;
+[v _var1 `S95 ~T0 @X0 1 e ]
+"63
+[; ;./main.h: 63: uint8_t flag1 = 0;
+[v _flag1 `uc ~T0 @X0 1 e ]
+[i _flag1
+-> -> 0 `i `uc
+]
+"64
+[; ;./main.h: 64: unsigned char letra = 'a';
+[v _letra `uc ~T0 @X0 1 e ]
+[i _letra
+-> -> 97 `ui `uc
+]
+"65
+[; ;./main.h: 65: signed char num1 = 8;
+[v _num1 `c ~T0 @X0 1 e ]
+[i _num1
+-> -> 8 `i `c
+]
+"66
+[; ;./main.h: 66: unsigned int acc1 = 300;
+[v _acc1 `ui ~T0 @X0 1 e ]
+[i _acc1
+-> -> 300 `i `ui
+]
+"67
+[; ;./main.h: 67: signed int sum1 = 5000;
+[v _sum1 `i ~T0 @X0 1 e ]
+[i _sum1
+-> 5000 `i
+]
+"68
+[; ;./main.h: 68: float divisao = 1.3;
+[v _divisao `f ~T0 @X0 1 e ]
+[i _divisao
+-> .1.3 `f
+]
+"71
+[; ;./main.h: 71: __bank2 int logEntry;
+[v _logEntry `Yi ~T0 @X0 1 e ]
+"72
+[; ;./main.h: 72: __eeprom char title[20];
+[v _title `Euc ~T0 @X0 -> 20 `i e ]
+"73
+[; ;./main.h: 73: volatile int ad_read;
+[v _ad_read `Vi ~T0 @X0 1 e ]
+"74
+[; ;./main.h: 74: const char tabela[] = {0x34,0x56};
+[v _tabela `Cuc ~T0 @X0 -> 2 `i e ]
+[i _tabela
+:U ..
+-> -> 52 `i `uc
+-> -> 86 `i `uc
+..
+]
 "15 main.c
-[; ;main.c: 15: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
+[; ;main.c: 15: void functions_c_coding(void)
+[v _functions_c_coding `(v ~T0 @X0 1 ef ]
 "16
 [; ;main.c: 16: {
 {
-[e :U _main ]
+[e :U _functions_c_coding ]
 [f ]
 "18
-[; ;main.c: 18:  while(1)
-[e :U 97 ]
+[; ;main.c: 18:     if (flag1 == 1)
+[e $ ! == -> _flag1 `i -> 1 `i 98  ]
 "19
 [; ;main.c: 19:     {
 {
+"20
+[; ;main.c: 20:         letra = 'd';
+[e = _letra -> -> 100 `ui `uc ]
 "21
 [; ;main.c: 21:     }
 }
-[e :U 96 ]
-[e $U 97  ]
+[e $U 99  ]
+"22
+[; ;main.c: 22:     else
 [e :U 98 ]
 "23
-[; ;main.c: 23:     return;
-[e $UE 95  ]
+[; ;main.c: 23:     {
+{
 "24
-[; ;main.c: 24: }
-[e :UE 95 ]
+[; ;main.c: 24:         letra = 'e';
+[e = _letra -> -> 101 `ui `uc ]
+"25
+[; ;main.c: 25:     }
+}
+[e :U 99 ]
+"28
+[; ;main.c: 28:     switch(letra)
+[e $U 101  ]
+"29
+[; ;main.c: 29:     {
+{
+"30
+[; ;main.c: 30:         case 'a':
+[e :U 102 ]
+"31
+[; ;main.c: 31:             sum1 = 2;
+[e = _sum1 -> 2 `i ]
+"32
+[; ;main.c: 32:             break;
+[e $U 100  ]
+"33
+[; ;main.c: 33:         case 'b':
+[e :U 103 ]
+"34
+[; ;main.c: 34:             sum1 = 3;
+[e = _sum1 -> 3 `i ]
+"35
+[; ;main.c: 35:             break;
+[e $U 100  ]
+"36
+[; ;main.c: 36:         default:
+[e :U 104 ]
+"37
+[; ;main.c: 37:             sum1 = 0;
+[e = _sum1 -> 0 `i ]
+"38
+[; ;main.c: 38:             break;
+[e $U 100  ]
+"39
+[; ;main.c: 39:     }
+}
+[e $U 100  ]
+[e :U 101 ]
+[e [\ -> _letra `i , $ -> -> 97 `ui `i 102
+ , $ -> -> 98 `ui `i 103
+ 104 ]
+[e :U 100 ]
+"42
+[; ;main.c: 42:     for(int i=1; i<=10; i++)
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 1 `i ]
+[e $ <= _i -> 10 `i 105  ]
+[e $U 106  ]
+[e :U 105 ]
+"43
+[; ;main.c: 43:     {
+{
+"44
+[; ;main.c: 44:         sum1 = sum1 + 1;
+[e = _sum1 + _sum1 -> 1 `i ]
+"45
+[; ;main.c: 45:     }
+}
+[e ++ _i -> 1 `i ]
+[e $ <= _i -> 10 `i 105  ]
+[e :U 106 ]
+}
+"48
+[; ;main.c: 48:     while(sum1 < 20)
+[e $U 108  ]
+[e :U 109 ]
+"49
+[; ;main.c: 49:     {
+{
+"50
+[; ;main.c: 50:         sum1 = sum1 + 1;
+[e = _sum1 + _sum1 -> 1 `i ]
+"51
+[; ;main.c: 51:     }
+}
+[e :U 108 ]
+"48
+[; ;main.c: 48:     while(sum1 < 20)
+[e $ < _sum1 -> 20 `i 109  ]
+[e :U 110 ]
+"54
+[; ;main.c: 54:     do
+[e :U 113 ]
+"55
+[; ;main.c: 55:     {
+{
+"56
+[; ;main.c: 56:         sum1 = sum1 + 1;
+[e = _sum1 + _sum1 -> 1 `i ]
+"57
+[; ;main.c: 57:     }while(sum1 < 30);
+}
+[e $ < _sum1 -> 30 `i 113  ]
+[e :U 112 ]
+"60
+[; ;main.c: 60:     var1.byte = 0xA2;
+[e = . _var1 1 -> -> 162 `i `uc ]
+"61
+[; ;main.c: 61:     var1.bits.bit0 = 0;
+[e = . . _var1 0 0 -> -> 0 `i `uc ]
+"62
+[; ;main.c: 62: }
+[e :UE 97 ]
+}
+"64
+[; ;main.c: 64: void binary_logic(void)
+[v _binary_logic `(v ~T0 @X0 1 ef ]
+"65
+[; ;main.c: 65: {
+{
+[e :U _binary_logic ]
+[f ]
+"67
+[; ;main.c: 67:     num1 = num1 << 1;
+[e = _num1 -> << -> _num1 `i -> 1 `i `c ]
+"68
+[; ;main.c: 68:     num1 = num1 >> 2;
+[e = _num1 -> >> -> _num1 `i -> 2 `i `c ]
+"71
+[; ;main.c: 71:     num1 = (num1 << 1) | (num1 >> 7);
+[e = _num1 -> | << -> _num1 `i -> 1 `i >> -> _num1 `i -> 7 `i `c ]
+"72
+[; ;main.c: 72:     num1 = (num1 >> 1) | (num1 << 7);
+[e = _num1 -> | >> -> _num1 `i -> 1 `i << -> _num1 `i -> 7 `i `c ]
+"75
+[; ;main.c: 75:     num1 = num1 ^ 0b00100000;
+[e = _num1 -> ^ -> _num1 `i -> 32 `i `c ]
+"78
+[; ;main.c: 78:     num1 = num1 | 0b00000001;
+[e = _num1 -> | -> _num1 `i -> 1 `i `c ]
+"81
+[; ;main.c: 81:     num1 = num1 & 0b11111101;
+[e = _num1 -> & -> _num1 `i -> 253 `i `c ]
+"84
+[; ;main.c: 84:     if (num1 & 0b01000000)
+[e $ ! != & -> _num1 `i -> 64 `i -> 0 `i 115  ]
+"85
+[; ;main.c: 85:     {
+{
+"87
+[; ;main.c: 87:     }
+}
+[e :U 115 ]
+"88
+[; ;main.c: 88: }
+[e :UE 114 ]
+}
+"90
+[; ;main.c: 90: void assembly_instructions(void)
+[v _assembly_instructions `(v ~T0 @X0 1 ef ]
+"91
+[; ;main.c: 91: {
+{
+[e :U _assembly_instructions ]
+[f ]
+"94
+[; ;main.c: 94:     __nop();
+[e ( ___nop ..  ]
+"101
+[; ;main.c: 101:     __asm("NOP");
+[; <" NOP ;# ">
+"105
+[; ;main.c: 105: }
+[e :UE 116 ]
+}
+[v $root$_main `(v ~T0 @X0 0 e ]
+"109
+[; ;main.c: 109: void main(void)
+[v _main `(v ~T0 @X0 1 ef ]
+"110
+[; ;main.c: 110: {
+{
+[e :U _main ]
+[f ]
+"112
+[; ;main.c: 112:     functions_c_coding();
+[e ( _functions_c_coding ..  ]
+"113
+[; ;main.c: 113:     binary_logic();
+[e ( _binary_logic ..  ]
+"114
+[; ;main.c: 114:     assembly_instructions();
+[e ( _assembly_instructions ..  ]
+"117
+[; ;main.c: 117:     while(1)
+[e :U 119 ]
+"118
+[; ;main.c: 118:     {
+{
+"120
+[; ;main.c: 120:     }
+}
+[e :U 118 ]
+[e $U 119  ]
+[e :U 120 ]
+"122
+[; ;main.c: 122:     return;
+[e $UE 117  ]
+"123
+[; ;main.c: 123: }
+[e :UE 117 ]
 }

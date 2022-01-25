@@ -1721,6 +1721,144 @@ extern __bank0 __bit __timeout;
 
 # 1 "./main.h" 1
 # 16 "./main.h"
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int8_t;
+
+
+
+
+
+
+typedef signed int int16_t;
+
+
+
+
+
+
+
+typedef __int24 int24_t;
+
+
+
+
+
+
+
+typedef signed long int int32_t;
+# 52 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint8_t;
+
+
+
+
+
+typedef unsigned int uint16_t;
+
+
+
+
+
+
+typedef __uint24 uint24_t;
+
+
+
+
+
+
+typedef unsigned long int uint32_t;
+# 88 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_least8_t;
+
+
+
+
+
+
+
+typedef signed int int_least16_t;
+# 109 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_least24_t;
+# 118 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef signed long int int_least32_t;
+# 136 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_least8_t;
+
+
+
+
+
+
+typedef unsigned int uint_least16_t;
+# 154 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_least24_t;
+
+
+
+
+
+
+
+typedef unsigned long int uint_least32_t;
+# 181 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef signed char int_fast8_t;
+
+
+
+
+
+
+typedef signed int int_fast16_t;
+# 200 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef __int24 int_fast24_t;
+
+
+
+
+
+
+
+typedef signed long int int_fast32_t;
+# 224 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef unsigned char uint_fast8_t;
+
+
+
+
+
+typedef unsigned int uint_fast16_t;
+# 240 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef __uint24 uint_fast24_t;
+
+
+
+
+
+
+typedef unsigned long int uint_fast32_t;
+# 268 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef int32_t intmax_t;
+# 282 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c90\\stdint.h" 3
+typedef uint32_t uintmax_t;
+
+
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+# 16 "./main.h" 2
+
+
+
+
 #pragma config FOSC = HS
 #pragma config WDTE = OFF
 #pragma config PWRTE = ON
@@ -1729,17 +1867,155 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 33 "./main.h"
+# 42 "./main.h"
+typedef union
+{
+ struct
+ {
+  unsigned bit0 : 1;
+  unsigned bit1 : 1;
+  unsigned bit2 : 1;
+  unsigned bit3 : 1;
+  unsigned bit4 : 1;
+  unsigned bit5 : 1;
+  unsigned bit6 : 1;
+  unsigned bit7 : 1;
+ }bits;
+ char byte;
+}generic_byte;
+
+
+generic_byte var1;
+
+
+
+uint8_t flag1 = 0;
+unsigned char letra = 'a';
+signed char num1 = 8;
+unsigned int acc1 = 300;
+signed int sum1 = 5000;
+float divisao = 1.3;
+
+
+__bank2 int logEntry;
+__eeprom char title[20];
+volatile int ad_read;
+const char tabela[] = {0x34,0x56};
+
+
+
 void main(void);
+void functions_c_coding(void);
+void binary_logic(void);
+void assembly_instructions(void);
 # 11 "main.c" 2
 
+
+
+
+void functions_c_coding(void)
+{
+
+    if (flag1 == 1)
+    {
+        letra = 'd';
+    }
+    else
+    {
+        letra = 'e';
+    }
+
+
+    switch(letra)
+    {
+        case 'a':
+            sum1 = 2;
+            break;
+        case 'b':
+            sum1 = 3;
+            break;
+        default:
+            sum1 = 0;
+            break;
+    }
+
+
+    for(int i=1; i<=10; i++)
+    {
+        sum1 = sum1 + 1;
+    }
+
+
+    while(sum1 < 20)
+    {
+        sum1 = sum1 + 1;
+    }
+
+
+    do
+    {
+        sum1 = sum1 + 1;
+    }while(sum1 < 30);
+
+
+    var1.byte = 0xA2;
+    var1.bits.bit0 = 0;
+}
+
+void binary_logic(void)
+{
+
+    num1 = num1 << 1;
+    num1 = num1 >> 2;
+
+
+    num1 = (num1 << 1) | (num1 >> 7);
+    num1 = (num1 >> 1) | (num1 << 7);
+
+
+    num1 = num1 ^ 0b00100000;
+
+
+    num1 = num1 | 0b00000001;
+
+
+    num1 = num1 & 0b11111101;
+
+
+    if (num1 & 0b01000000)
+    {
+
+    }
+}
+
+void assembly_instructions(void)
+{
+
+
+    __nop();
+
+
+
+
+
+
+    __asm("NOP");
+
+
+
+}
 
 
 
 void main(void)
 {
 
- while(1)
+    functions_c_coding();
+    binary_logic();
+    assembly_instructions();
+
+
+    while(1)
     {
 
     }

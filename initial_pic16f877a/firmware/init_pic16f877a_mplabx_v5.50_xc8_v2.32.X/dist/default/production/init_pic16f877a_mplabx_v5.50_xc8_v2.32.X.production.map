@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.sym \
   --cmf=dist/default/production\init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.cmf \
-  -z -Q16F877A -oC:\Users\david\AppData\Local\Temp\xcAsj98.4 \
+  -z -Q16F877A -oC:\Users\david\AppData\Local\Temp\xcAsju0.4 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.map \
   -E1 -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
@@ -19,7 +19,7 @@ Linker command line:
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\david\AppData\Local\Temp\xcAsj98.o \
+  -pfunctab=ENTRY -k C:\Users\david\AppData\Local\Temp\xcAsju0.o \
   dist/default/production\init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o 
 
 Object code version is 3.11
@@ -29,7 +29,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\david\AppData\Local\Temp\xcAsj98.o
+C:\Users\david\AppData\Local\Temp\xcAsju0.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\init_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
