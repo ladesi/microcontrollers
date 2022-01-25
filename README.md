@@ -1,11 +1,11 @@
-# microcontrollers
+# Microcontrollers
 Small projects with microcontrollers and peripherals
 
 ## Projects
 
 - Initial (Hello World)
-- C Coding
-- IO
+- C Coding (PIC XC8 Compiler)
+- Digital IO (Button and Led)
 - External Interrupt
 - 7 Segment Display
 - Relay and Timer 0 (with interrupt)
@@ -24,5 +24,5 @@ Small projects with microcontrollers and peripherals
 - Capture Module
 - Compare Module
 - Internal Comparators
-- XC8 Libraries (PIC)
+- PIC XC8 Compiler Libraries
 - SPI Communication (Master and Slave)
