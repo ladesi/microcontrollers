@@ -1730,15 +1730,24 @@ extern __bank0 __bit __timeout;
 #pragma config WRT = OFF
 #pragma config CP = OFF
 # 36 "./main.h"
+void __attribute__((picinterrupt(("")))) myIsr(void);
 void init(void);
 void main(void);
-void blink_led(void);
-void blink_if_button(void);
-void button_trigger(void);
 # 11 "main.c" 2
 
 
 
+
+
+void __attribute__((picinterrupt(("")))) myIsr(void)
+{
+
+    if(INTCONbits.INTE && INTCONbits.INTF)
+    {
+        INTCONbits.INTF = 0;
+        PORTBbits.RB1 = !PORTBbits.RB1;
+    }
+}
 
 
 void init(void)
@@ -1755,52 +1764,29 @@ void init(void)
     TRISC = 0b00000000;
     PORTD = 0b00000000;
     TRISE = 0b00000000;
+
+
+    OPTION_REG = 0b10000011;
+# 54 "main.c"
+    INTCON = 0b00010000;
+# 65 "main.c"
 }
 
-void blink_led(void)
-{
-    PORTBbits.RB1 = 1;
-    _delay((unsigned long)((500)*(20000000/4000.0)));
-    PORTBbits.RB1 = 0;
-    _delay((unsigned long)((500)*(20000000/4000.0)));
-}
-
-void blink_if_button(void)
-{
-    if(!PORTBbits.RB0)
-    {
-        PORTBbits.RB1 = 1;
-        _delay((unsigned long)((500)*(20000000/4000.0)));
-        PORTBbits.RB1 = 0;
-        _delay((unsigned long)((500)*(20000000/4000.0)));
-    }
-    else
-    {
-        PORTBbits.RB1 = 0;
-    }
-}
-
-void button_trigger(void)
-{
-    if(!PORTBbits.RB0)
-    {
-        PORTBbits.RB1 = 1;
-        _delay((unsigned long)((2000)*(20000000/4000.0)));
-        PORTBbits.RB1 = 0;
-    }
-}
 
 void main(void)
 {
 
+    INTCONbits.GIE = 0;
+
+
     init();
+
+
+    INTCONbits.GIE = 1;
 
 
     while(1)
     {
-
-        blink_led();
-
 
     }
 

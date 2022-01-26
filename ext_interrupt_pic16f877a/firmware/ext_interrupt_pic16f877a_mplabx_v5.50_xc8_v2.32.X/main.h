@@ -1,6 +1,6 @@
 /*
  * PIC16F877A Samples
- * Sample 03: IO ports
+ * Sample 04: External Interrupt
  * Author: David Nascimento Coelho
  * Last Update: 2022/01/25
  */
@@ -33,8 +33,6 @@
 
 // FUNCTIONS
 
+void __interrupt() myIsr(void);
 void init(void);
 void main(void);
-void blink_led(void);
-void blink_if_button(void);
-void button_trigger(void);
