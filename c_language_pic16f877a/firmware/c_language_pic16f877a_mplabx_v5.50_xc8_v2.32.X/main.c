@@ -71,20 +71,25 @@ void binary_logic(void)
     num1 = (num1 << 1) | (num1 >> 7); // rotate left
     num1 = (num1 >> 1) | (num1 << 7); // rotate right
     
-    // XOR ^ (reverse bit value)
-    num1 = num1 ^ 0b00100000; // reverses bit 5 of num1
+    // AND & (verify bit)
+    if (num1 & 0b01000000) // verifies bit 6 of num1
+    {        
+    }
+    if(testbit(num1,6))    // verifies bit 6 of num1
+    {
+    }
     
     // OR | (set bit)
     num1 = num1 | 0b00000001; // set bit 0 of num1
+    num1 = setbit(num1,0);    // set bit 0 of num1
     
-    // AND & (clr bit)
+    // AND & (clear bit)
     num1 = num1 & 0b11111101; // clear bit 1 of num1
+    num1 = clrbit(num1,1);    // clear bit 1 of num1
     
-    // AND & (verify bit)
-    if (num1 & 0b01000000)  // verifies bit 6 of num1
-    {
-        
-    }
+    // XOR ^ (reverse bit value)
+    num1 = num1 ^ 0b00100000; // reverses bit 5 of num1
+    num1 = invbit(num1,5);    // reverses bit 5 of num1
 }
 
 void assembly_instructions(void)

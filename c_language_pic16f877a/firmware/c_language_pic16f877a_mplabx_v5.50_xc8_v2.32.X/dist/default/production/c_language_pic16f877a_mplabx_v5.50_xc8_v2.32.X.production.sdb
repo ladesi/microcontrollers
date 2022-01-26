@@ -15,9 +15,9 @@
 [v _functions_c_coding functions_c_coding `(v  1 e 1 0 ]
 "64
 [v _binary_logic binary_logic `(v  1 e 1 0 ]
-"90
+"95
 [v _assembly_instructions assembly_instructions `(v  1 e 1 0 ]
-"109
+"114
 [v _main main `(v  1 e 1 0 ]
 [s S22 . 1 `uc 1 bit0 1 0 :1:0 
 `uc 1 bit1 1 0 :1:1 
@@ -28,23 +28,23 @@
 `uc 1 bit6 1 0 :1:6 
 `uc 1 bit7 1 0 :1:7 
 ]
-"59 C:\Users\david\Documents\microcontrollers\c_language_pic16f877a\firmware\c_language_pic16f877a_mplabx_v5.50_xc8_v2.32.X/main.h
+"67 C:\Users\david\Documents\microcontrollers\c_language_pic16f877a\firmware\c_language_pic16f877a_mplabx_v5.50_xc8_v2.32.X/main.h
 [u S31 . 1 `S22 1 bits 1 0 `uc 1 byte 1 0 ]
 [v _var1 var1 `S31  1 e 1 0 ]
-"64
-[v _letra letra `uc  1 e 1 0 ]
-"65
-[v _num1 num1 `c  1 e 1 0 ]
-"67
-[v _sum1 sum1 `i  1 e 2 0 ]
 "72
-[v _title title `VE[20]uc  1 e 20 0 ]
+[v _letra letra `uc  1 e 1 0 ]
 "73
+[v _num1 num1 `c  1 e 1 0 ]
+"75
+[v _sum1 sum1 `i  1 e 2 0 ]
+"80
+[v _title title `VE[20]uc  1 e 20 0 ]
+"81
 [v _ad_read ad_read `VEi  1 e 2 0 ]
-"109 C:\Users\david\Documents\microcontrollers\c_language_pic16f877a\firmware\c_language_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+"114 C:\Users\david\Documents\microcontrollers\c_language_pic16f877a\firmware\c_language_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"123
+"128
 } 0
 "15
 [v _functions_c_coding functions_c_coding `(v  1 e 1 0 ]
@@ -56,10 +56,10 @@
 "64
 [v _binary_logic binary_logic `(v  1 e 1 0 ]
 {
-"88
+"93
 } 0
-"90
+"95
 [v _assembly_instructions assembly_instructions `(v  1 e 1 0 ]
 {
-"105
+"110
 } 0

@@ -5,7 +5,8 @@
  * Last Update: 2022/01/25
  */
 
-// DEFINE ".h" JUST ONE TIME
+// Guard condition: contents of this file
+// are not included more than once.
 
 #ifndef MAIN_H
 #define	MAIN_H
@@ -30,11 +31,18 @@
 
 // CONSTANTS
 
+#define _XTAL_FREQ 20000000
+
 #define count_min 0b00110011    // binary base
 #define count_max 65            // decimal base
 #define level_min 025           // octal base
 #define level_max 0xFD          // hexadecimal base
 #define letter 'A'              // ASCII coding
+
+#define testbit(var,bit) ((var) & (1 <<(bit)))
+#define setbit(var,bit)  ((var) |= (1 << (bit)))
+#define clrbit(var,bit)  ((var) &= ~(1 << (bit)))
+#define invbit(var,bit)  ((var) ^= (1<<(bit)))
 
 // VARIABLES
 

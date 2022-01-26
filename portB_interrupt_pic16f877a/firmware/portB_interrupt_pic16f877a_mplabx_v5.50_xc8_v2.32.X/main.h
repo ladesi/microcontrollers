@@ -1,6 +1,6 @@
 /*
  * PIC16F877A Samples
- * Sample 03: IO ports
+ * Sample 05: PORTB Interrupt on Change
  * Author: David Nascimento Coelho
  * Last Update: 2022/01/25
  */
@@ -27,15 +27,24 @@
 
 // CONSTANTS
 
-#define _XTAL_FREQ 20000000     // Processor frequency for delay functions
+#define _XTAL_FREQ 20000000
 
-#define bot1 !PORTBbits.RB0     // button at RB0 pin
-#define led1 PORTBbits.RB1      // led at RB1 pin
+#define botao1 !PORTBbits.RB0
+#define led1    PORTBbits.RB1
+#define botao2 !PORTBbits.RB4
+#define botao3 !PORTBbits.RB5
+#define botao4 !PORTBbits.RB6
+#define botao5 !PORTBbits.RB7
+
+#define leds PORTC
+
+#define testbit(var,bit) ((var) & (1 <<(bit)))
+#define setbit(var,bit)  ((var) |= (1 << (bit)))
+#define clrbit(var,bit)  ((var) &= ~(1 << (bit)))
+#define invbit(var,bit)  ((var) ^= (1<<(bit)))
 
 // FUNCTIONS
 
+void __interrupt() myIsr();
 void init(void);
 void main(void);
-void blink_led(void);
-void blink_if_button(void);
-void button_trigger(void);
