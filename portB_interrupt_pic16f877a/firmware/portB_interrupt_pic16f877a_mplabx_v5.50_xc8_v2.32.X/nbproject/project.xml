@@ -3,7 +3,7 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>proj_03_int_portb</name>
+            <name>portB_interrupt_pic16f877a_mplabx_v5.50_xc8_v2.32</name>
             <creation-uuid>999e683c-84d3-4695-8c85-57145c9b3171</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>

@@ -7,8 +7,8 @@
 
 // LIBRARIES INCLUDE
 
-#include "main.h"
 #include <xc.h>
+#include "main.h"
 
 // FUNCTIONS
 
