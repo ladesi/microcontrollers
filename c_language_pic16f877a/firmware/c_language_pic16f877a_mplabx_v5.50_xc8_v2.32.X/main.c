@@ -1,8 +1,8 @@
 /*
  * PIC16F877A Samples
- * Sample 01: C coding
+ * Sample 02: C coding
  * Author: David Nascimento Coelho
- * Last Update: 2021/09/25
+ * Last Update: 2022/01/25
  */
 
 // LIBRARIES INCLUDE

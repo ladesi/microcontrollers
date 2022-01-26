@@ -5,7 +5,8 @@
  * Last Update: 2022/01/25
  */
 
-// DEFINE ".h" JUST ONE TIME
+// Guard condition: contents of this file
+// are not included more than once.
 
 #ifndef MAIN_H
 #define	MAIN_H
