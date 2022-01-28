@@ -1,0 +1,135 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"16 C:\Users\david\Documents\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _myIsr myIsr `II(v  1 e 1 0 ]
+"50
+[v _init init `(v  1 e 1 0 ]
+"118
+[v _main main `(v  1 e 1 0 ]
+"53 C:\Users\david\Documents\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X/globals.h
+[v _cont cont `i  1 e 2 0 ]
+"54
+[v _duty1 duty1 `ui  1 e 2 0 ]
+"55
+[v _duty2 duty2 `ui  1 e 2 0 ]
+"59 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[v _TMR0 TMR0 `VEuc  1 e 1 @1 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S64 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S73 . 1 `S64 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES73  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+[s S118 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"295
+[u S127 . 1 `S118 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES127  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+"454
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S86 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S95 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S100 . 1 `S86 1 . 1 0 `S95 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES100  1 e 1 @11 ]
+[s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 PSPIF 1 0 :1:7 
+]
+"549
+[u S31 . 1 `S22 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES31  1 e 1 @12 ]
+"634
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"655
+[v _T1CON T1CON `VEuc  1 e 1 @16 ]
+"1255
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+[s S43 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 PSPIE 1 0 :1:7 
+]
+"1635
+[u S52 . 1 `S43 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES52  1 e 1 @140 ]
+"118 C:\Users\david\Documents\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"158
+} 0
+"50
+[v _init init `(v  1 e 1 0 ]
+{
+"115
+} 0
+"16
+[v _myIsr myIsr `II(v  1 e 1 0 ]
+{
+"47
+} 0
