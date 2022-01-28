@@ -1,0 +1,409 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+[v _itoa itoa `(*.4uc  1 e 1 0 ]
+"17
+[v _utoa utoa `(*.4uc  1 e 1 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+"59 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\lcd.c
+[v _lcd_delay_1us lcd_delay_1us `(v  1 e 1 0 ]
+"60
+[v _lcd_delay_40us lcd_delay_40us `(v  1 e 1 0 ]
+"61
+[v _lcd_delay_2ms lcd_delay_2ms `(v  1 e 1 0 ]
+"62
+[v _lcd_delay_40ms lcd_delay_40ms `(v  1 e 1 0 ]
+"64
+[v _lcd_en_pulse lcd_en_pulse `(v  1 e 1 0 ]
+"72
+[v _lcd_send_nibble lcd_send_nibble `(v  1 e 1 0 ]
+"88
+[v _lcd_byte_4bits lcd_byte_4bits `(v  1 e 1 0 ]
+"101
+[v _lcd_byte_8bits lcd_byte_8bits `(v  1 e 1 0 ]
+"107
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+"119
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+"131
+[v _lcd_puts lcd_puts `(v  1 e 1 0 ]
+"145
+[v _lcd_init_8bits lcd_init_8bits `(v  1 e 1 0 ]
+"163
+[v _lcd_init_4bits lcd_init_4bits `(v  1 e 1 0 ]
+"184
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+"192
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+"204
+[v _lcd_goto lcd_goto `(v  1 e 1 0 ]
+"18 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _myIsr myIsr `II(v  1 e 1 0 ]
+"28
+[v _amost amost `(ui  1 e 2 0 ]
+"39
+[v _init init `(v  1 e 1 0 ]
+"107
+[v _main main `(v  1 e 1 0 ]
+"42 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X/globals.h
+[v _ad_value ad_value `VEui  1 e 2 0 ]
+"43
+[v _ad_char_val ad_char_val `[5]uc  1 e 5 0 ]
+"45
+[v _address address `uc  1 e 1 0 ]
+"46
+[v _read_value read_value `uc  1 e 1 0 ]
+[s S311 . 1 `uc 1 C 1 0 :1:0 
+`uc 1 DC 1 0 :1:1 
+`uc 1 Z 1 0 :1:2 
+`uc 1 nPD 1 0 :1:3 
+`uc 1 nTO 1 0 :1:4 
+`uc 1 RP 1 0 :2:5 
+`uc 1 IRP 1 0 :1:7 
+]
+"99 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h
+[s S319 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 RP0 1 0 :1:5 
+`uc 1 RP1 1 0 :1:6 
+]
+[s S323 . 1 `uc 1 CARRY 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 ZERO 1 0 :1:2 
+]
+[u S327 . 1 `S311 1 . 1 0 `S319 1 . 1 0 `S323 1 . 1 0 ]
+[v _STATUSbits STATUSbits `VES327  1 e 1 @3 ]
+"166
+[v _PORTA PORTA `VEuc  1 e 1 @5 ]
+"216
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+[s S54 . 1 `uc 1 RB0 1 0 :1:0 
+`uc 1 RB1 1 0 :1:1 
+`uc 1 RB2 1 0 :1:2 
+`uc 1 RB3 1 0 :1:3 
+`uc 1 RB4 1 0 :1:4 
+`uc 1 RB5 1 0 :1:5 
+`uc 1 RB6 1 0 :1:6 
+`uc 1 RB7 1 0 :1:7 
+]
+"233
+[u S63 . 1 `S54 1 . 1 0 ]
+[v _PORTBbits PORTBbits `VES63  1 e 1 @6 ]
+"278
+[v _PORTC PORTC `VEuc  1 e 1 @7 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"402
+[v _PORTE PORTE `VEuc  1 e 1 @9 ]
+[s S222 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+]
+"414
+[u S226 . 1 `S222 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES226  1 e 1 @9 ]
+"454
+[v _INTCON INTCON `VEuc  1 e 1 @11 ]
+[s S22 . 1 `uc 1 RBIF 1 0 :1:0 
+`uc 1 INTF 1 0 :1:1 
+`uc 1 TMR0IF 1 0 :1:2 
+`uc 1 RBIE 1 0 :1:3 
+`uc 1 INTE 1 0 :1:4 
+`uc 1 TMR0IE 1 0 :1:5 
+`uc 1 PEIE 1 0 :1:6 
+`uc 1 GIE 1 0 :1:7 
+]
+"477
+[s S31 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T0IF 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 T0IE 1 0 :1:5 
+]
+[u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+"1152
+[v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
+"1159
+[v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
+[s S81 . 1 `uc 1 ADON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 GO_nDONE 1 0 :1:2 
+`uc 1 CHS 1 0 :3:3 
+`uc 1 ADCS 1 0 :2:6 
+]
+"1190
+[s S87 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO 1 0 :1:2 
+`uc 1 CHS0 1 0 :1:3 
+`uc 1 CHS1 1 0 :1:4 
+`uc 1 CHS2 1 0 :1:5 
+`uc 1 ADCS0 1 0 :1:6 
+`uc 1 ADCS1 1 0 :1:7 
+]
+[s S95 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nDONE 1 0 :1:2 
+]
+[s S98 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 GO_DONE 1 0 :1:2 
+]
+[u S101 . 1 `S81 1 . 1 0 `S87 1 . 1 0 `S95 1 . 1 0 `S98 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES101  1 e 1 @31 ]
+"1255
+[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @129 ]
+"1325
+[v _TRISA TRISA `VEuc  1 e 1 @133 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"1561
+[v _TRISE TRISE `VEuc  1 e 1 @137 ]
+"2087
+[v _CMCON CMCON `VEuc  1 e 1 @156 ]
+"2222
+[v _ADRESL ADRESL `VEuc  1 e 1 @158 ]
+"2229
+[v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+"2288
+[v _EEDATA EEDATA `VEuc  1 e 1 @268 ]
+"2295
+[v _EEADR EEADR `VEuc  1 e 1 @269 ]
+"2316
+[v _EECON1 EECON1 `VEuc  1 e 1 @396 ]
+[s S291 . 1 `uc 1 RD 1 0 :1:0 
+`uc 1 WR 1 0 :1:1 
+`uc 1 WREN 1 0 :1:2 
+`uc 1 WRERR 1 0 :1:3 
+`uc 1 . 1 0 :3:4 
+`uc 1 EEPGD 1 0 :1:7 
+]
+"2331
+[u S298 . 1 `S291 1 . 1 0 ]
+[v _EECON1bits EECON1bits `VES298  1 e 1 @396 ]
+"2361
+[v _EECON2 EECON2 `VEuc  1 e 1 @397 ]
+"26 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\lcd.c
+[v _var4 var4 `uc  1 e 1 0 ]
+"31
+[v _var5 var5 `uc  1 e 1 0 ]
+"36
+[v _var6 var6 `uc  1 e 1 0 ]
+"41
+[v _var7 var7 `uc  1 e 1 0 ]
+"107 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"157
+} 0
+"131 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\lcd.c
+[v _lcd_puts lcd_puts `(v  1 e 1 0 ]
+{
+"133
+[v lcd_puts@cnt cnt `uc  1 a 1 9 ]
+"134
+[v lcd_puts@x x `uc  1 a 1 8 ]
+"131
+[v lcd_puts@vector vector `*.26uc  1 p 2 0 ]
+[v lcd_puts@LENGHT LENGHT `uc  1 p 1 2 ]
+"143
+} 0
+"119
+[v _lcd_char lcd_char `(v  1 e 1 0 ]
+{
+[v lcd_char@data data `uc  1 a 1 wreg ]
+[v lcd_char@data data `uc  1 a 1 wreg ]
+"121
+[v lcd_char@data data `uc  1 a 1 7 ]
+"129
+} 0
+"184
+[v _lcd_init lcd_init `(v  1 e 1 0 ]
+{
+"190
+} 0
+"145
+[v _lcd_init_8bits lcd_init_8bits `(v  1 e 1 0 ]
+{
+"161
+} 0
+"163
+[v _lcd_init_4bits lcd_init_4bits `(v  1 e 1 0 ]
+{
+"182
+} 0
+"62
+[v _lcd_delay_40ms lcd_delay_40ms `(v  1 e 1 0 ]
+{
+} 0
+"192
+[v _lcd_clear lcd_clear `(v  1 e 1 0 ]
+{
+"196
+} 0
+"61
+[v _lcd_delay_2ms lcd_delay_2ms `(v  1 e 1 0 ]
+{
+} 0
+"204
+[v _lcd_goto lcd_goto `(v  1 e 1 0 ]
+{
+[v lcd_goto@lin lin `uc  1 a 1 wreg ]
+[v lcd_goto@lin lin `uc  1 a 1 wreg ]
+[v lcd_goto@col col `uc  1 p 1 8 ]
+[v lcd_goto@lin lin `uc  1 a 1 9 ]
+"229
+} 0
+"107
+[v _lcd_cmd lcd_cmd `(v  1 e 1 0 ]
+{
+[v lcd_cmd@data data `uc  1 a 1 wreg ]
+[v lcd_cmd@data data `uc  1 a 1 wreg ]
+"109
+[v lcd_cmd@data data `uc  1 a 1 7 ]
+"117
+} 0
+"60
+[v _lcd_delay_40us lcd_delay_40us `(v  1 e 1 0 ]
+{
+} 0
+"101
+[v _lcd_byte_8bits lcd_byte_8bits `(v  1 e 1 0 ]
+{
+[v lcd_byte_8bits@data data `uc  1 a 1 wreg ]
+[v lcd_byte_8bits@data data `uc  1 a 1 wreg ]
+"103
+[v lcd_byte_8bits@data data `uc  1 a 1 2 ]
+"105
+} 0
+"88
+[v _lcd_byte_4bits lcd_byte_4bits `(v  1 e 1 0 ]
+{
+[v lcd_byte_4bits@data data `uc  1 a 1 wreg ]
+"90
+[v lcd_byte_4bits@nibble nibble `uc  1 a 1 6 ]
+"88
+[v lcd_byte_4bits@data data `uc  1 a 1 wreg ]
+"93
+[v lcd_byte_4bits@data data `uc  1 a 1 5 ]
+"99
+} 0
+"72
+[v _lcd_send_nibble lcd_send_nibble `(v  1 e 1 0 ]
+{
+[v lcd_send_nibble@data data `uc  1 a 1 wreg ]
+[v lcd_send_nibble@data data `uc  1 a 1 wreg ]
+"76
+[v lcd_send_nibble@data data `uc  1 a 1 2 ]
+"86
+} 0
+"64
+[v _lcd_en_pulse lcd_en_pulse `(v  1 e 1 0 ]
+{
+"70
+} 0
+"59
+[v _lcd_delay_1us lcd_delay_1us `(v  1 e 1 0 ]
+{
+} 0
+"4 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\itoa.c
+[v _itoa itoa `(*.4uc  1 e 1 0 ]
+{
+[v itoa@buf buf `*.4uc  1 a 1 wreg ]
+[v itoa@buf buf `*.4uc  1 a 1 wreg ]
+[v itoa@val val `i  1 p 2 9 ]
+[v itoa@base base `i  1 p 2 11 ]
+[v itoa@buf buf `*.4uc  1 a 1 14 ]
+"14
+} 0
+"17
+[v _utoa utoa `(*.4uc  1 e 1 0 ]
+{
+[v utoa@buf buf `*.4uc  1 a 1 wreg ]
+"19
+[v utoa@v v `ui  1 a 2 5 ]
+"20
+[v utoa@c c `uc  1 a 1 7 ]
+"17
+[v utoa@buf buf `*.4uc  1 a 1 wreg ]
+[v utoa@val val `ui  1 p 2 0 ]
+[v utoa@base base `i  1 p 2 2 ]
+"22
+[v utoa@buf buf `*.4uc  1 a 1 8 ]
+"37
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwmod.c
+[v ___lwmod __lwmod `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwmod@counter counter `uc  1 a 1 7 ]
+"5
+[v ___lwmod@divisor divisor `ui  1 p 2 2 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 4 ]
+"25
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\common\lwdiv.c
+[v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
+{
+"10
+[v ___lwdiv@quotient quotient `ui  1 a 2 7 ]
+"11
+[v ___lwdiv@counter counter `uc  1 a 1 9 ]
+"5
+[v ___lwdiv@divisor divisor `ui  1 p 2 2 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 4 ]
+"30
+} 0
+"39 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _init init `(v  1 e 1 0 ]
+{
+"105
+} 0
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eewrite.c
+[v _eeprom_write eeprom_write `(v  1 e 1 0 ]
+{
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@addr addr `uc  1 a 1 wreg ]
+[v eeprom_write@value value `uc  1 p 1 2 ]
+[v eeprom_write@addr addr `uc  1 a 1 4 ]
+"9
+} 0
+"6 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c90\pic\__eeread.c
+[v _eeprom_read eeprom_read `(uc  1 e 1 0 ]
+{
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+[v eeprom_read@addr addr `uc  1 a 1 wreg ]
+"9
+[v eeprom_read@addr addr `uc  1 a 1 3 ]
+"19
+} 0
+"28 C:\Users\david\Documents\microcontrollers\eeprom_lcd_pic16f877a\firmware\eeprom_lcd_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
+[v _amost amost `(ui  1 e 2 0 ]
+{
+"30
+[v amost@value value `ui  1 a 2 5 ]
+"36
+} 0
+"18
+[v _myIsr myIsr `II(v  1 e 1 0 ]
+{
+"26
+} 0

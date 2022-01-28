@@ -1,8 +1,8 @@
 /*
  * PIC16F877A Samples
- * Sample 16: Stepper Motor
+ * Sample 17: EEPROM
  * Author: David Nascimento Coelho
- * Last Update: 2022/25/01
+ * Last Update: 2022/01/25
  */
 
 // Guard condition: contents of this file
@@ -27,10 +27,21 @@
 
 #define _XTAL_FREQ 20000000         // Processor frequency for delay functions
 
-#define EN1 PORTCbits.RC1       // Enable 1 of L298N or L293D
-#define EN2 PORTCbits.RC2       // Enable 2 of L298N or L293D
-#define IN1 PORTDbits.RD4       // IN1 of L298N or L293D
-#define IN2 PORTDbits.RD5       // IN2 of L298N or L293D
-#define IN3 PORTDbits.RD6       // IN3 of L298N or L293D
-#define IN4 PORTDbits.RD7       // IN4 of L298N or L293D
-#define delay_quantity 500      // how many ms stay at the same position
+#define bot1     !PORTBbits.RB0 // button at RB0 pin
+#define led1     PORTBbits.RB1  // led at RB1 pin
+#define bot2     !PORTBbits.RB4 // button at RB4 pin
+#define bot3     !PORTBbits.RB5 // button at RB5 pin
+
+#define LCD_nbits 8             // number of LCD data bits
+#define LCD_RS	PORTEbits.RE0   // LCD command/character selection
+#define LCD_EN	PORTEbits.RE1   // LCD enable pin
+#define LCD_dat PORTD           // LCD byte for command and character
+
+// VARIABLES
+
+volatile unsigned int ad_value; // get value of conversion
+unsigned char ad_char_val[5];   // receive char value
+
+unsigned char address;          // eeprom address to be written
+unsigned char read_value;       // last readed value of eeprom
+unsigned char write_value;      // last written value to eeprom
