@@ -44,7 +44,7 @@ bssBANK0 BANK0 1 32 32 9 1
 strings STRING 0 300 300 1F 2
 bssCOMMON COMMON 1 7A 7A 2 1
 config CONFIG 4 2007 2007 1 2
-$C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+$C:\Users\david\AppData\Local\Temp\xcAsips.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 1 2
@@ -99,24 +99,24 @@ STRING 3E6-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-F cinit CODE >600:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-F cinit CODE >603:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-F cinit CODE >632:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-10 cinit CODE >633:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-11 cinit CODE >636:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-12 cinit CODE >637:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-13 cinit CODE >638:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-14 cinit CODE >639:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-15 cinit CODE >640:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-16 cinit CODE >641:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-17 cinit CODE >642:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-18 cinit CODE >643:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-19 cinit CODE >644:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-1A cinit CODE >645:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-1B cinit CODE >646:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-1C cinit CODE >652:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-1C cinit CODE >654:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
-1D cinit CODE >655:C:\Users\david\AppData\Local\Temp\xcAsbhk.s
+F cinit CODE >600:C:\Users\david\AppData\Local\Temp\xcAsips.s
+F cinit CODE >603:C:\Users\david\AppData\Local\Temp\xcAsips.s
+F cinit CODE >632:C:\Users\david\AppData\Local\Temp\xcAsips.s
+10 cinit CODE >633:C:\Users\david\AppData\Local\Temp\xcAsips.s
+11 cinit CODE >636:C:\Users\david\AppData\Local\Temp\xcAsips.s
+12 cinit CODE >637:C:\Users\david\AppData\Local\Temp\xcAsips.s
+13 cinit CODE >638:C:\Users\david\AppData\Local\Temp\xcAsips.s
+14 cinit CODE >639:C:\Users\david\AppData\Local\Temp\xcAsips.s
+15 cinit CODE >640:C:\Users\david\AppData\Local\Temp\xcAsips.s
+16 cinit CODE >641:C:\Users\david\AppData\Local\Temp\xcAsips.s
+17 cinit CODE >642:C:\Users\david\AppData\Local\Temp\xcAsips.s
+18 cinit CODE >643:C:\Users\david\AppData\Local\Temp\xcAsips.s
+19 cinit CODE >644:C:\Users\david\AppData\Local\Temp\xcAsips.s
+1A cinit CODE >645:C:\Users\david\AppData\Local\Temp\xcAsips.s
+1B cinit CODE >646:C:\Users\david\AppData\Local\Temp\xcAsips.s
+1C cinit CODE >652:C:\Users\david\AppData\Local\Temp\xcAsips.s
+1C cinit CODE >654:C:\Users\david\AppData\Local\Temp\xcAsips.s
+1D cinit CODE >655:C:\Users\david\AppData\Local\Temp\xcAsips.s
 4 intentry CODE >18:C:\Users\david\Documents\microcontrollers\ad_lcd_lm35_pic16f877a\firmware\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
 33E text23 CODE >18:C:\Users\david\Documents\microcontrollers\ad_lcd_lm35_pic16f877a\firmware\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
 33E text23 CODE >21:C:\Users\david\Documents\microcontrollers\ad_lcd_lm35_pic16f877a\firmware\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
@@ -361,7 +361,7 @@ lcd_puts@vector 20 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
 itoa@base 2B 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+___sp 0 0 STACK 2 stack C:\Users\david\AppData\Local\Temp\xcAsips.o
 _init 53A 0 CODE 0 text21 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _itoa 588 0 CODE 0 text17 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _main 124 0 CODE 0 maintext dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
@@ -371,7 +371,7 @@ _var5 34 0 BANK0 1 bssBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplab
 _var6 33 0 BANK0 1 bssBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _var7 32 0 BANK0 1 bssBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-start 18 0 CODE 0 init C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+start 18 0 CODE 0 init C:\Users\david\AppData\Local\Temp\xcAsips.o
 __size_of_init 0 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __size_of_itoa 0 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
@@ -387,12 +387,12 @@ __end_of_lcd_clear 782 0 CODE 0 text7 dist/default/production\ad_lcd_lm35_pic16f
 utoa@c 27 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 utoa@v 25 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __size_of_lcd_clear 0 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\david\AppData\Local\Temp\xcAsips.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _lcd_delay_1us 7C4 0 CODE 0 text16 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
@@ -415,8 +415,8 @@ __end_of___lwdiv 31A 0 CODE 0 text20 dist/default/production\ad_lcd_lm35_pic16f8
 __end_of___lwmod 480 0 CODE 0 text19 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _INTCON B 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _OPTION_REG 81 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\david\AppData\Local\Temp\xcAsbhk.o
-___stacklo 0 0 ABS 0 - C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+___stackhi 0 0 ABS 0 - C:\Users\david\AppData\Local\Temp\xcAsips.o
+___stacklo 0 0 ABS 0 - C:\Users\david\AppData\Local\Temp\xcAsips.o
 ___lwdiv@quotient 77 0 COMMON 1 cstackCOMMON dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __size_of_myIsr 0 0 ABS 0 - dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 itoa@buf 2E 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
@@ -430,7 +430,7 @@ __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic1
 utoa@buf 28 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 utoa@val 20 0 BANK0 1 cstackBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 lcd_byte_8bits@data 72 0 COMMON 1 cstackCOMMON dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+___int_sp 0 0 STACK 2 stack C:\Users\david\AppData\Local\Temp\xcAsips.o
 _lcd_byte_4bits 63E 0 CODE 0 text13 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _ad_char_val 36 0 BANK0 1 bssBANK0 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _lcd_byte_8bits 782 0 CODE 0 text12 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
@@ -499,7 +499,7 @@ _lcd_puts 480 0 CODE 0 text1 dist/default/production\ad_lcd_lm35_pic16f877a_mpla
 __Lintentry 8 0 CODE 0 intentry -
 __stringtab 600 0 STRING 0 strings dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 _lcd_cmd 72E 0 CODE 0 text10 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\david\AppData\Local\Temp\xcAsbhk.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\david\AppData\Local\Temp\xcAsips.o
 __end_of_lcd_send_nibble 53A 0 CODE 0 text14 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __end_of_lcd_char 72E 0 CODE 0 text2 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -

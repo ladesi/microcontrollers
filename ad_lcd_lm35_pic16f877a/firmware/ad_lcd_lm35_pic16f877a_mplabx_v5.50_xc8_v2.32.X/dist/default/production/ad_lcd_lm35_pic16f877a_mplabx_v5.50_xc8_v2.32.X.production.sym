@@ -264,7 +264,7 @@ strings 600 63D STRING 600 0
 text13 63E 7CB CODE 63E 0
 %locals
 dist/default/production\ad_lcd_lm35_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-C:\Users\david\AppData\Local\Temp\xcAsbhk.s
+C:\Users\david\AppData\Local\Temp\xcAsips.s
 600 F 0 CODE 0
 603 F 0 CODE 0
 632 F 0 CODE 0
