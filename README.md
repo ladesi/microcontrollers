@@ -1,5 +1,5 @@
 # Microcontrollers
-Small projects with microcontrollers and peripherals
+Small samples with microcontrollers and peripherals
 
 ## Projects
 
