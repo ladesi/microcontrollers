@@ -16,8 +16,8 @@ Small projects with microcontrollers and peripherals
 - Serial Communication (USART - Rx and Tx)
 - Timer 2
 - PWM (Hardware based)
-- ServoMotor
 - DC Motor and L298N
+- ServoMotor (Software Based PWM)
 - Stepper Motor
 - EEPROM (Reading and Writing)
 - I2C Communication (Master and Slave)

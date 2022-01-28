@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>serial_usart_pic16f877a_mplabx_v5.50_xc8_v2.32</name>
-            <creation-uuid>0ab5461e-248f-4fd3-99a0-d963d9332911</creation-uuid>
+            <name>tmr2_led_pic16f877a_mplabx_v5.50_xc8_v2.32</name>
+            <creation-uuid>619de5b2-e1d4-49ff-9c3d-c3da266fc203</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>
