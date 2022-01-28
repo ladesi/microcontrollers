@@ -8,7 +8,7 @@ Small projects with microcontrollers and peripherals
 - Digital IO (Button and Led)
 - External Interruption (on edge)
 - PortB Interruption (on change)
-- 7 Segment Display
+- 7 Segment Display (Persistense of Vision)
 - Relay and Timer 0 (with interrupt)
 - Relay and Timer 0 (without interrupt)
 - Oscilloscope and Timer 1
@@ -22,8 +22,8 @@ Small projects with microcontrollers and peripherals
 - EEPROM (Reading and Writing)
 - I2C Communication (Master and Slave)
 - Keypad (AD Method and Scan Method)
+- PIC XC8 Compiler Libraries
 - Capture Module
 - Compare Module
 - Internal Comparators
-- PIC XC8 Compiler Libraries
 - SPI Communication (Master and Slave)
