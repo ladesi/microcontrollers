@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed Sep 13 09:05:44 2023
+                                                                                               Wed Sep 13 09:22:05 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F877A
@@ -183,11 +183,11 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    169     018D                     	;# 
    170                           
    171                           	psect	nvCOMMON
-   172     0070                     __pnvCOMMON:
-   173     0070                     _duty2:
-   174     0070                     	ds	2
-   175     0072                     _duty1:
-   176     0072                     	ds	2
+   172     0071                     __pnvCOMMON:
+   173     0071                     _duty2:
+   174     0071                     	ds	2
+   175     0073                     _duty1:
+   176     0073                     	ds	2
    177     000E                     _TMR1	set	14
    178     0010                     _T1CON	set	16
    179     000B                     _INTCON	set	11
@@ -210,48 +210,48 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    196     008C                     _PIE1bits	set	140
    197                           
    198                           	psect	cinit
-   199     000F                     start_initialization:	
+   199     07FA                     start_initialization:	
    200                           ; #config settings
    201                           
-   202     000F                     __initialization:
+   202     07FA                     __initialization:
    203                           
    204                           ; Clear objects allocated to COMMON
-   205     000F  01F8               	clrf	__pbssCOMMON& (0+127)
-   206     0010  01F9               	clrf	(__pbssCOMMON+1)& (0+127)
-   207     0011                     end_of_initialization:	
+   205     07FA  01F9               	clrf	__pbssCOMMON& (0+127)
+   206     07FB  01FA               	clrf	(__pbssCOMMON+1)& (0+127)
+   207     07FC                     end_of_initialization:	
    208                           ;End of C runtime variable initialization code
    209                           
-   210     0011                     __end_of__initialization:
-   211     0011  0183               	clrf	3
-   212     0012  120A  118A  2882   	ljmp	_main	;jump to C main() function
+   210     07FC                     __end_of__initialization:
+   211     07FC  0183               	clrf	3
+   212     07FD  120A  118A  2F24   	ljmp	_main	;jump to C main() function
    213                           
    214                           	psect	bssCOMMON
-   215     0078                     __pbssCOMMON:
-   216     0078                     _cont:
-   217     0078                     	ds	2
+   215     0079                     __pbssCOMMON:
+   216     0079                     _cont:
+   217     0079                     	ds	2
    218                           
    219                           	psect	cstackCOMMON
-   220     0074                     __pcstackCOMMON:
-   221     0074                     ?_myIsr:
-   222     0074                     ??_myIsr:	
+   220     0075                     __pcstackCOMMON:
+   221     0075                     ?_myIsr:
+   222     0075                     ??_myIsr:	
    223                           ; 1 bytes @ 0x0
    224                           
-   225     0074                     ?_init:	
+   225     0075                     ?_init:	
    226                           ; 1 bytes @ 0x0
    227                           
-   228     0074                     ?_main:	
+   228     0075                     ?_main:	
    229                           ; 1 bytes @ 0x0
    230                           
    231                           
    232                           ; 1 bytes @ 0x0
-   233     0074                     	ds	4
-   234     0078                     ??_init:
-   235     0078                     ??_main:	
+   233     0075                     	ds	4
+   234     0079                     ??_init:
+   235     0079                     ??_main:	
    236                           ; 1 bytes @ 0x4
    237                           
    238                           
    239                           	psect	maintext
-   240     0082                     __pmaintext:	
+   240     0724                     __pmaintext:	
    241                           ; 1 bytes @ 0x4
    242 ;;
    243 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
@@ -285,180 +285,180 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    271 ;; This function uses a non-reentrant model
    272 ;;
    273                           
-   274     0082                     _main:	
+   274     0724                     _main:	
    275                           ;psect for function _main
    276                           
-   277     0082                     l730:	
+   277     0724                     l730:	
    278                           ;incstack = 0
    279                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    280                           
    281                           
    282                           ;main.c: 121:     INTCONbits.GIE = 0;
-   283     0082  138B               	bcf	11,7	;volatile
-   284     0083                     l732:
+   283     0724  138B               	bcf	11,7	;volatile
+   284     0725                     l732:
    285                           
    286                           ;main.c: 124:     init();
-   287     0083  120A  118A  20EB  120A  118A  	fcall	_init
-   288     0088                     l734:
+   287     0725  120A  118A  26F0  120A  118A  	fcall	_init
+   288     072A                     l734:
    289                           
    290                           ;main.c: 127:     INTCONbits.GIE = 1;
-   291     0088  178B               	bsf	11,7	;volatile
-   292     0089                     l736:
+   291     072A  178B               	bsf	11,7	;volatile
+   292     072B                     l736:
    293                           
    294                           ;main.c: 131:     {;main.c: 133:         if (!PORTBbits.RB4 && duty1 < 40)
-   295     0089  1283               	bcf	3,5	;RP0=0, select bank0
-   296     008A  1303               	bcf	3,6	;RP1=0, select bank0
-   297     008B  1A06               	btfsc	6,4	;volatile
-   298     008C  288E               	goto	u111
-   299     008D  288F               	goto	u110
-   300     008E                     u111:
-   301     008E  28A2               	goto	l744
-   302     008F                     u110:
-   303     008F                     l738:
-   304     008F  3000               	movlw	0
-   305     0090  0273               	subwf	_duty1+1,w
-   306     0091  3028               	movlw	40
-   307     0092  1903               	skipnz
-   308     0093  0272               	subwf	_duty1,w
-   309     0094  1803               	skipnc
-   310     0095  2897               	goto	u121
-   311     0096  2898               	goto	u120
-   312     0097                     u121:
-   313     0097  28A2               	goto	l744
-   314     0098                     u120:
-   315     0098                     l67:
-   316     0098  1E06               	btfss	6,4	;volatile
-   317     0099  289B               	goto	u131
-   318     009A  289C               	goto	u130
-   319     009B                     u131:
-   320     009B  2898               	goto	l67
-   321     009C                     u130:
-   322     009C                     l742:
+   295     072B  1283               	bcf	3,5	;RP0=0, select bank0
+   296     072C  1303               	bcf	3,6	;RP1=0, select bank0
+   297     072D  1A06               	btfsc	6,4	;volatile
+   298     072E  2F30               	goto	u111
+   299     072F  2F31               	goto	u110
+   300     0730                     u111:
+   301     0730  2F44               	goto	l744
+   302     0731                     u110:
+   303     0731                     l738:
+   304     0731  3000               	movlw	0
+   305     0732  0274               	subwf	_duty1+1,w
+   306     0733  3028               	movlw	40
+   307     0734  1903               	skipnz
+   308     0735  0273               	subwf	_duty1,w
+   309     0736  1803               	skipnc
+   310     0737  2F39               	goto	u121
+   311     0738  2F3A               	goto	u120
+   312     0739                     u121:
+   313     0739  2F44               	goto	l744
+   314     073A                     u120:
+   315     073A                     l67:
+   316     073A  1E06               	btfss	6,4	;volatile
+   317     073B  2F3D               	goto	u131
+   318     073C  2F3E               	goto	u130
+   319     073D                     u131:
+   320     073D  2F3A               	goto	l67
+   321     073E                     u130:
+   322     073E                     l742:
    323                           
    324                           ;main.c: 136:             duty1++;
-   325     009C  3001               	movlw	1
-   326     009D  07F2               	addwf	_duty1,f
-   327     009E  1803               	skipnc
-   328     009F  0AF3               	incf	_duty1+1,f
-   329     00A0  3000               	movlw	0
-   330     00A1  07F3               	addwf	_duty1+1,f
-   331     00A2                     l744:
+   325     073E  3001               	movlw	1
+   326     073F  07F3               	addwf	_duty1,f
+   327     0740  1803               	skipnc
+   328     0741  0AF4               	incf	_duty1+1,f
+   329     0742  3000               	movlw	0
+   330     0743  07F4               	addwf	_duty1+1,f
+   331     0744                     l744:
    332                           
    333                           ;main.c: 138:         if (!PORTBbits.RB5 && duty1 > 20)
-   334     00A2  1A86               	btfsc	6,5	;volatile
-   335     00A3  28A5               	goto	u141
-   336     00A4  28A6               	goto	u140
-   337     00A5                     u141:
-   338     00A5  28B9               	goto	l752
-   339     00A6                     u140:
-   340     00A6                     l746:
-   341     00A6  3000               	movlw	0
-   342     00A7  0273               	subwf	_duty1+1,w
-   343     00A8  3015               	movlw	21
-   344     00A9  1903               	skipnz
-   345     00AA  0272               	subwf	_duty1,w
-   346     00AB  1C03               	skipc
-   347     00AC  28AE               	goto	u151
-   348     00AD  28AF               	goto	u150
-   349     00AE                     u151:
-   350     00AE  28B9               	goto	l752
-   351     00AF                     u150:
-   352     00AF                     l71:
-   353     00AF  1E86               	btfss	6,5	;volatile
-   354     00B0  28B2               	goto	u161
-   355     00B1  28B3               	goto	u160
-   356     00B2                     u161:
-   357     00B2  28AF               	goto	l71
-   358     00B3                     u160:
-   359     00B3                     l750:
+   334     0744  1A86               	btfsc	6,5	;volatile
+   335     0745  2F47               	goto	u141
+   336     0746  2F48               	goto	u140
+   337     0747                     u141:
+   338     0747  2F5B               	goto	l752
+   339     0748                     u140:
+   340     0748                     l746:
+   341     0748  3000               	movlw	0
+   342     0749  0274               	subwf	_duty1+1,w
+   343     074A  3015               	movlw	21
+   344     074B  1903               	skipnz
+   345     074C  0273               	subwf	_duty1,w
+   346     074D  1C03               	skipc
+   347     074E  2F50               	goto	u151
+   348     074F  2F51               	goto	u150
+   349     0750                     u151:
+   350     0750  2F5B               	goto	l752
+   351     0751                     u150:
+   352     0751                     l71:
+   353     0751  1E86               	btfss	6,5	;volatile
+   354     0752  2F54               	goto	u161
+   355     0753  2F55               	goto	u160
+   356     0754                     u161:
+   357     0754  2F51               	goto	l71
+   358     0755                     u160:
+   359     0755                     l750:
    360                           
    361                           ;main.c: 141:             duty1--;
-   362     00B3  3001               	movlw	1
-   363     00B4  02F2               	subwf	_duty1,f
-   364     00B5  3000               	movlw	0
-   365     00B6  1C03               	skipc
-   366     00B7  03F3               	decf	_duty1+1,f
-   367     00B8  02F3               	subwf	_duty1+1,f
-   368     00B9                     l752:
+   362     0755  3001               	movlw	1
+   363     0756  02F3               	subwf	_duty1,f
+   364     0757  3000               	movlw	0
+   365     0758  1C03               	skipc
+   366     0759  03F4               	decf	_duty1+1,f
+   367     075A  02F4               	subwf	_duty1+1,f
+   368     075B                     l752:
    369                           
    370                           ;main.c: 145:         if (!PORTBbits.RB6 && duty2 < 40)
-   371     00B9  1B06               	btfsc	6,6	;volatile
-   372     00BA  28BC               	goto	u171
-   373     00BB  28BD               	goto	u170
-   374     00BC                     u171:
-   375     00BC  28D0               	goto	l760
-   376     00BD                     u170:
-   377     00BD                     l754:
-   378     00BD  3000               	movlw	0
-   379     00BE  0271               	subwf	_duty2+1,w
-   380     00BF  3028               	movlw	40
-   381     00C0  1903               	skipnz
-   382     00C1  0270               	subwf	_duty2,w
-   383     00C2  1803               	skipnc
-   384     00C3  28C5               	goto	u181
-   385     00C4  28C6               	goto	u180
-   386     00C5                     u181:
-   387     00C5  28D0               	goto	l760
-   388     00C6                     u180:
-   389     00C6                     l75:
-   390     00C6  1F06               	btfss	6,6	;volatile
-   391     00C7  28C9               	goto	u191
-   392     00C8  28CA               	goto	u190
-   393     00C9                     u191:
-   394     00C9  28C6               	goto	l75
-   395     00CA                     u190:
-   396     00CA                     l758:
+   371     075B  1B06               	btfsc	6,6	;volatile
+   372     075C  2F5E               	goto	u171
+   373     075D  2F5F               	goto	u170
+   374     075E                     u171:
+   375     075E  2F72               	goto	l760
+   376     075F                     u170:
+   377     075F                     l754:
+   378     075F  3000               	movlw	0
+   379     0760  0272               	subwf	_duty2+1,w
+   380     0761  3028               	movlw	40
+   381     0762  1903               	skipnz
+   382     0763  0271               	subwf	_duty2,w
+   383     0764  1803               	skipnc
+   384     0765  2F67               	goto	u181
+   385     0766  2F68               	goto	u180
+   386     0767                     u181:
+   387     0767  2F72               	goto	l760
+   388     0768                     u180:
+   389     0768                     l75:
+   390     0768  1F06               	btfss	6,6	;volatile
+   391     0769  2F6B               	goto	u191
+   392     076A  2F6C               	goto	u190
+   393     076B                     u191:
+   394     076B  2F68               	goto	l75
+   395     076C                     u190:
+   396     076C                     l758:
    397                           
    398                           ;main.c: 148:             duty2++;
-   399     00CA  3001               	movlw	1
-   400     00CB  07F0               	addwf	_duty2,f
-   401     00CC  1803               	skipnc
-   402     00CD  0AF1               	incf	_duty2+1,f
-   403     00CE  3000               	movlw	0
-   404     00CF  07F1               	addwf	_duty2+1,f
-   405     00D0                     l760:
+   399     076C  3001               	movlw	1
+   400     076D  07F1               	addwf	_duty2,f
+   401     076E  1803               	skipnc
+   402     076F  0AF2               	incf	_duty2+1,f
+   403     0770  3000               	movlw	0
+   404     0771  07F2               	addwf	_duty2+1,f
+   405     0772                     l760:
    406                           
    407                           ;main.c: 150:         if (!PORTBbits.RB7 && duty2 > 20)
-   408     00D0  1B86               	btfsc	6,7	;volatile
-   409     00D1  28D3               	goto	u201
-   410     00D2  28D4               	goto	u200
-   411     00D3                     u201:
-   412     00D3  2889               	goto	l736
-   413     00D4                     u200:
-   414     00D4                     l762:
-   415     00D4  3000               	movlw	0
-   416     00D5  0271               	subwf	_duty2+1,w
-   417     00D6  3015               	movlw	21
-   418     00D7  1903               	skipnz
-   419     00D8  0270               	subwf	_duty2,w
-   420     00D9  1C03               	skipc
-   421     00DA  28DC               	goto	u211
-   422     00DB  28DD               	goto	u210
-   423     00DC                     u211:
-   424     00DC  2889               	goto	l736
-   425     00DD                     u210:
-   426     00DD                     l79:
-   427     00DD  1F86               	btfss	6,7	;volatile
-   428     00DE  28E0               	goto	u221
-   429     00DF  28E1               	goto	u220
-   430     00E0                     u221:
-   431     00E0  28DD               	goto	l79
-   432     00E1                     u220:
-   433     00E1                     l766:
+   408     0772  1B86               	btfsc	6,7	;volatile
+   409     0773  2F75               	goto	u201
+   410     0774  2F76               	goto	u200
+   411     0775                     u201:
+   412     0775  2F2B               	goto	l736
+   413     0776                     u200:
+   414     0776                     l762:
+   415     0776  3000               	movlw	0
+   416     0777  0272               	subwf	_duty2+1,w
+   417     0778  3015               	movlw	21
+   418     0779  1903               	skipnz
+   419     077A  0271               	subwf	_duty2,w
+   420     077B  1C03               	skipc
+   421     077C  2F7E               	goto	u211
+   422     077D  2F7F               	goto	u210
+   423     077E                     u211:
+   424     077E  2F2B               	goto	l736
+   425     077F                     u210:
+   426     077F                     l79:
+   427     077F  1F86               	btfss	6,7	;volatile
+   428     0780  2F82               	goto	u221
+   429     0781  2F83               	goto	u220
+   430     0782                     u221:
+   431     0782  2F7F               	goto	l79
+   432     0783                     u220:
+   433     0783                     l766:
    434                           
    435                           ;main.c: 153:             duty2--;
-   436     00E1  3001               	movlw	1
-   437     00E2  02F0               	subwf	_duty2,f
-   438     00E3  3000               	movlw	0
-   439     00E4  1C03               	skipc
-   440     00E5  03F1               	decf	_duty2+1,f
-   441     00E6  02F1               	subwf	_duty2+1,f
-   442     00E7  2889               	goto	l736
-   443     00E8  120A  118A  280C   	ljmp	start
-   444     00EB                     __end_of_main:
+   436     0783  3001               	movlw	1
+   437     0784  02F1               	subwf	_duty2,f
+   438     0785  3000               	movlw	0
+   439     0786  1C03               	skipc
+   440     0787  03F2               	decf	_duty2+1,f
+   441     0788  02F2               	subwf	_duty2+1,f
+   442     0789  2F2B               	goto	l736
+   443     078A  120A  118A  280C   	ljmp	start
+   444     078D                     __end_of_main:
    445                           
    446                           	psect	text1
-   447     00EB                     __ptext1:	
+   447     06F0                     __ptext1:	
    448 ;; *************** function _init *****************
    449 ;; Defined at:
    450 ;;		line 50 in file "main.c"
@@ -489,118 +489,118 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    475 ;; This function uses a non-reentrant model
    476 ;;
    477                           
-   478     00EB                     _init:	
+   478     06F0                     _init:	
    479                           ;psect for function _init
    480                           
-   481     00EB                     l676:	
+   481     06F0                     l676:	
    482                           ;incstack = 0
    483                           ; Regs used in _init: [wreg+status,2]
    484                           
    485                           
    486                           ;main.c: 54:     PORTA = 0b00000000;
-   487     00EB  1283               	bcf	3,5	;RP0=0, select bank0
-   488     00EC  1303               	bcf	3,6	;RP1=0, select bank0
-   489     00ED  0185               	clrf	5	;volatile
+   487     06F0  1283               	bcf	3,5	;RP0=0, select bank0
+   488     06F1  1303               	bcf	3,6	;RP1=0, select bank0
+   489     06F2  0185               	clrf	5	;volatile
    490                           
    491                           ;main.c: 55:     PORTB = 0b00000000;
-   492     00EE  0186               	clrf	6	;volatile
+   492     06F3  0186               	clrf	6	;volatile
    493                           
    494                           ;main.c: 56:     PORTC = 0b00000000;
-   495     00EF  0187               	clrf	7	;volatile
+   495     06F4  0187               	clrf	7	;volatile
    496                           
    497                           ;main.c: 57:     TRISD = 0b00000000;
-   498     00F0  1683               	bsf	3,5	;RP0=1, select bank1
-   499     00F1  1303               	bcf	3,6	;RP1=0, select bank1
-   500     00F2  0188               	clrf	8	;volatile
+   498     06F5  1683               	bsf	3,5	;RP0=1, select bank1
+   499     06F6  1303               	bcf	3,6	;RP1=0, select bank1
+   500     06F7  0188               	clrf	8	;volatile
    501                           
    502                           ;main.c: 58:     PORTE = 0b00000000;
-   503     00F3  1283               	bcf	3,5	;RP0=0, select bank0
-   504     00F4  1303               	bcf	3,6	;RP1=0, select bank0
-   505     00F5  0189               	clrf	9	;volatile
+   503     06F8  1283               	bcf	3,5	;RP0=0, select bank0
+   504     06F9  1303               	bcf	3,6	;RP1=0, select bank0
+   505     06FA  0189               	clrf	9	;volatile
    506                           
    507                           ;main.c: 60:     TRISA = 0b00000000;
-   508     00F6  1683               	bsf	3,5	;RP0=1, select bank1
-   509     00F7  1303               	bcf	3,6	;RP1=0, select bank1
-   510     00F8  0185               	clrf	5	;volatile
-   511     00F9                     l678:
+   508     06FB  1683               	bsf	3,5	;RP0=1, select bank1
+   509     06FC  1303               	bcf	3,6	;RP1=0, select bank1
+   510     06FD  0185               	clrf	5	;volatile
+   511     06FE                     l678:
    512                           
    513                           ;main.c: 61:     TRISB = 0b11110001;
-   514     00F9  30F1               	movlw	241
-   515     00FA  0086               	movwf	6	;volatile
-   516     00FB                     l680:
+   514     06FE  30F1               	movlw	241
+   515     06FF  0086               	movwf	6	;volatile
+   516     0700                     l680:
    517                           
    518                           ;main.c: 62:     TRISC = 0b10000000;
-   519     00FB  3080               	movlw	128
-   520     00FC  0087               	movwf	7	;volatile
+   519     0700  3080               	movlw	128
+   520     0701  0087               	movwf	7	;volatile
    521                           
    522                           ;main.c: 63:     PORTD = 0b00000000;
-   523     00FD  1283               	bcf	3,5	;RP0=0, select bank0
-   524     00FE  1303               	bcf	3,6	;RP1=0, select bank0
-   525     00FF  0188               	clrf	8	;volatile
+   523     0702  1283               	bcf	3,5	;RP0=0, select bank0
+   524     0703  1303               	bcf	3,6	;RP1=0, select bank0
+   525     0704  0188               	clrf	8	;volatile
    526                           
    527                           ;main.c: 64:     TRISE = 0b00000000;
-   528     0100  1683               	bsf	3,5	;RP0=1, select bank1
-   529     0101  1303               	bcf	3,6	;RP1=0, select bank1
-   530     0102  0189               	clrf	9	;volatile
-   531     0103                     l682:
+   528     0705  1683               	bsf	3,5	;RP0=1, select bank1
+   529     0706  1303               	bcf	3,6	;RP1=0, select bank1
+   530     0707  0189               	clrf	9	;volatile
+   531     0708                     l682:
    532                           
    533                           ;main.c: 68:     OPTION_REG = 0b10000000;
-   534     0103  3080               	movlw	128
-   535     0104  0081               	movwf	1	;volatile
-   536     0105                     l684:
+   534     0708  3080               	movlw	128
+   535     0709  0081               	movwf	1	;volatile
+   536     070A                     l684:
    537                           
    538                           ;main.c: 79:     INTCON = 0b01100000;
-   539     0105  3060               	movlw	96
-   540     0106  008B               	movwf	11	;volatile
-   541     0107                     l686:
+   539     070A  3060               	movlw	96
+   540     070B  008B               	movwf	11	;volatile
+   541     070C                     l686:
    542                           
    543                           ;main.c: 90:     TMR0 = 256 - 125;
-   544     0107  3083               	movlw	131
-   545     0108  1283               	bcf	3,5	;RP0=0, select bank0
-   546     0109  1303               	bcf	3,6	;RP1=0, select bank0
-   547     010A  0081               	movwf	1	;volatile
-   548     010B                     l688:
+   544     070C  3083               	movlw	131
+   545     070D  1283               	bcf	3,5	;RP0=0, select bank0
+   546     070E  1303               	bcf	3,6	;RP1=0, select bank0
+   547     070F  0081               	movwf	1	;volatile
+   548     0710                     l688:
    549                           
    550                           ;main.c: 95:     T1CON = 0b00010001;
-   551     010B  3011               	movlw	17
-   552     010C  0090               	movwf	16	;volatile
-   553     010D                     l690:
+   551     0710  3011               	movlw	17
+   552     0711  0090               	movwf	16	;volatile
+   553     0712                     l690:
    554                           
    555                           ;main.c: 106:     TMR1 = 65536 - 50000;
-   556     010D  303C               	movlw	60
-   557     010E  008F               	movwf	15	;volatile
-   558     010F  30B0               	movlw	176
-   559     0110  008E               	movwf	14	;volatile
-   560     0111                     l692:
+   556     0712  303C               	movlw	60
+   557     0713  008F               	movwf	15	;volatile
+   558     0714  30B0               	movlw	176
+   559     0715  008E               	movwf	14	;volatile
+   560     0716                     l692:
    561                           
    562                           ;main.c: 109:     PIE1bits.TMR1IE = 1;
-   563     0111  1683               	bsf	3,5	;RP0=1, select bank1
-   564     0112  1303               	bcf	3,6	;RP1=0, select bank1
-   565     0113  140C               	bsf	12,0	;volatile
+   563     0716  1683               	bsf	3,5	;RP0=1, select bank1
+   564     0717  1303               	bcf	3,6	;RP1=0, select bank1
+   565     0718  140C               	bsf	12,0	;volatile
    566                           
    567                           ;main.c: 111:     cont = 0;
-   568     0114  01F8               	clrf	_cont
-   569     0115  01F9               	clrf	_cont+1
-   570     0116                     l694:
+   568     0719  01F9               	clrf	_cont
+   569     071A  01FA               	clrf	_cont+1
+   570     071B                     l694:
    571                           
    572                           ;main.c: 112:     duty1 = 20;
-   573     0116  3014               	movlw	20
-   574     0117  00F2               	movwf	_duty1
-   575     0118  3000               	movlw	0
-   576     0119  00F3               	movwf	_duty1+1
-   577     011A                     l696:
+   573     071B  3014               	movlw	20
+   574     071C  00F3               	movwf	_duty1
+   575     071D  3000               	movlw	0
+   576     071E  00F4               	movwf	_duty1+1
+   577     071F                     l696:
    578                           
    579                           ;main.c: 113:     duty2 = 40;
-   580     011A  3028               	movlw	40
-   581     011B  00F0               	movwf	_duty2
-   582     011C  3000               	movlw	0
-   583     011D  00F1               	movwf	_duty2+1
-   584     011E                     l60:
-   585     011E  0008               	return
-   586     011F                     __end_of_init:
+   580     071F  3028               	movlw	40
+   581     0720  00F1               	movwf	_duty2
+   582     0721  3000               	movlw	0
+   583     0722  00F2               	movwf	_duty2+1
+   584     0723                     l60:
+   585     0723  0008               	return
+   586     0724                     __end_of_init:
    587                           
    588                           	psect	text2
-   589     0015                     __ptext2:	
+   589     078D                     __ptext2:	
    590 ;; *************** function _myIsr *****************
    591 ;; Defined at:
    592 ;;		line 16 in file "main.c"
@@ -630,194 +630,194 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    616 ;; This function uses a non-reentrant model
    617 ;;
    618                           
-   619     0015                     _myIsr:	
+   619     078D                     _myIsr:	
    620                           ;psect for function _myIsr
    621                           
-   622     0015                     i1l698:
+   622     078D                     i1l698:
    623                           
    624                           ;main.c: 18:     if (PIR1bits.TMR1IF && PIE1bits.TMR1IE)
-   625     0015  1283               	bcf	3,5	;RP0=0, select bank0
-   626     0016  1303               	bcf	3,6	;RP1=0, select bank0
-   627     0017  1C0C               	btfss	12,0	;volatile
-   628     0018  281A               	goto	u1_21
-   629     0019  281B               	goto	u1_20
-   630     001A                     u1_21:
-   631     001A  283F               	goto	i1l710
-   632     001B                     u1_20:
-   633     001B                     i1l700:
-   634     001B  1683               	bsf	3,5	;RP0=1, select bank1
-   635     001C  1303               	bcf	3,6	;RP1=0, select bank1
-   636     001D  1C0C               	btfss	12,0	;volatile
-   637     001E  2820               	goto	u2_21
-   638     001F  2821               	goto	u2_20
-   639     0020                     u2_21:
-   640     0020  283F               	goto	i1l710
-   641     0021                     u2_20:
-   642     0021                     i1l702:
+   625     078D  1283               	bcf	3,5	;RP0=0, select bank0
+   626     078E  1303               	bcf	3,6	;RP1=0, select bank0
+   627     078F  1C0C               	btfss	12,0	;volatile
+   628     0790  2F92               	goto	u1_21
+   629     0791  2F93               	goto	u1_20
+   630     0792                     u1_21:
+   631     0792  2FB7               	goto	i1l710
+   632     0793                     u1_20:
+   633     0793                     i1l700:
+   634     0793  1683               	bsf	3,5	;RP0=1, select bank1
+   635     0794  1303               	bcf	3,6	;RP1=0, select bank1
+   636     0795  1C0C               	btfss	12,0	;volatile
+   637     0796  2F98               	goto	u2_21
+   638     0797  2F99               	goto	u2_20
+   639     0798                     u2_21:
+   640     0798  2FB7               	goto	i1l710
+   641     0799                     u2_20:
+   642     0799                     i1l702:
    643                           
    644                           ;main.c: 19:     {;main.c: 20:         PIR1bits.TMR1IF = 0;
-   645     0021  1283               	bcf	3,5	;RP0=0, select bank0
-   646     0022  1303               	bcf	3,6	;RP1=0, select bank0
-   647     0023  100C               	bcf	12,0	;volatile
-   648     0024                     i1l704:
+   645     0799  1283               	bcf	3,5	;RP0=0, select bank0
+   646     079A  1303               	bcf	3,6	;RP1=0, select bank0
+   647     079B  100C               	bcf	12,0	;volatile
+   648     079C                     i1l704:
    649                           
    650                           ;main.c: 21:         PORTBbits.RB2 = !PORTBbits.RB2;
-   651     0024  1003               	clrc
-   652     0025  1D06               	btfss	6,2	;volatile
-   653     0026  1403               	setc
-   654     0027  1803               	btfsc	3,0
-   655     0028  282A               	goto	u3_21
-   656     0029  282E               	goto	u3_20
-   657     002A                     u3_21:
-   658     002A  1283               	bcf	3,5	;RP0=0, select bank0
-   659     002B  1303               	bcf	3,6	;RP1=0, select bank0
-   660     002C  1506               	bsf	6,2	;volatile
-   661     002D  2831               	goto	u4_24
-   662     002E                     u3_20:
-   663     002E  1283               	bcf	3,5	;RP0=0, select bank0
-   664     002F  1303               	bcf	3,6	;RP1=0, select bank0
-   665     0030  1106               	bcf	6,2	;volatile
-   666     0031                     u4_24:
-   667     0031                     i1l706:
+   651     079C  1003               	clrc
+   652     079D  1D06               	btfss	6,2	;volatile
+   653     079E  1403               	setc
+   654     079F  1803               	btfsc	3,0
+   655     07A0  2FA2               	goto	u3_21
+   656     07A1  2FA6               	goto	u3_20
+   657     07A2                     u3_21:
+   658     07A2  1283               	bcf	3,5	;RP0=0, select bank0
+   659     07A3  1303               	bcf	3,6	;RP1=0, select bank0
+   660     07A4  1506               	bsf	6,2	;volatile
+   661     07A5  2FA9               	goto	u4_24
+   662     07A6                     u3_20:
+   663     07A6  1283               	bcf	3,5	;RP0=0, select bank0
+   664     07A7  1303               	bcf	3,6	;RP1=0, select bank0
+   665     07A8  1106               	bcf	6,2	;volatile
+   666     07A9                     u4_24:
+   667     07A9                     i1l706:
    668                           
    669                           ;main.c: 22:         cont = 0;
-   670     0031  01F8               	clrf	_cont
-   671     0032  01F9               	clrf	_cont+1
-   672     0033                     i1l708:
+   670     07A9  01F9               	clrf	_cont
+   671     07AA  01FA               	clrf	_cont+1
+   672     07AB                     i1l708:
    673                           
    674                           ;main.c: 23:         TMR1 = 65536 - 50000 + TMR1;
-   675     0033  080E               	movf	14,w	;volatile
-   676     0034  3EB0               	addlw	176
-   677     0035  00F4               	movwf	??_myIsr
-   678     0036  080F               	movf	15,w	;volatile
-   679     0037  1803               	skipnc
-   680     0038  3E01               	addlw	1
-   681     0039  3E3C               	addlw	60
-   682     003A  00F5               	movwf	??_myIsr+1
-   683     003B  0874               	movf	??_myIsr,w
-   684     003C  008E               	movwf	14	;volatile
-   685     003D  0875               	movf	??_myIsr+1,w
-   686     003E  008F               	movwf	15	;volatile
-   687     003F                     i1l710:
+   675     07AB  080E               	movf	14,w	;volatile
+   676     07AC  3EB0               	addlw	176
+   677     07AD  00F5               	movwf	??_myIsr
+   678     07AE  080F               	movf	15,w	;volatile
+   679     07AF  1803               	skipnc
+   680     07B0  3E01               	addlw	1
+   681     07B1  3E3C               	addlw	60
+   682     07B2  00F6               	movwf	??_myIsr+1
+   683     07B3  0875               	movf	??_myIsr,w
+   684     07B4  008E               	movwf	14	;volatile
+   685     07B5  0876               	movf	??_myIsr+1,w
+   686     07B6  008F               	movwf	15	;volatile
+   687     07B7                     i1l710:
    688                           
    689                           ;main.c: 26:     if (INTCONbits.TMR0IF && INTCONbits.TMR0IE)
-   690     003F  1D0B               	btfss	11,2	;volatile
-   691     0040  2842               	goto	u5_21
-   692     0041  2843               	goto	u5_20
-   693     0042                     u5_21:
-   694     0042  287B               	goto	i1l57
-   695     0043                     u5_20:
-   696     0043                     i1l712:
-   697     0043  1E8B               	btfss	11,5	;volatile
-   698     0044  2846               	goto	u6_21
-   699     0045  2847               	goto	u6_20
-   700     0046                     u6_21:
-   701     0046  287B               	goto	i1l57
-   702     0047                     u6_20:
-   703     0047                     i1l714:
+   690     07B7  1D0B               	btfss	11,2	;volatile
+   691     07B8  2FBA               	goto	u5_21
+   692     07B9  2FBB               	goto	u5_20
+   693     07BA                     u5_21:
+   694     07BA  2FF3               	goto	i1l57
+   695     07BB                     u5_20:
+   696     07BB                     i1l712:
+   697     07BB  1E8B               	btfss	11,5	;volatile
+   698     07BC  2FBE               	goto	u6_21
+   699     07BD  2FBF               	goto	u6_20
+   700     07BE                     u6_21:
+   701     07BE  2FF3               	goto	i1l57
+   702     07BF                     u6_20:
+   703     07BF                     i1l714:
    704                           
    705                           ;main.c: 27:     {;main.c: 28:         INTCONbits.TMR0IF = 0;
-   706     0047  110B               	bcf	11,2	;volatile
-   707     0048                     i1l716:
+   706     07BF  110B               	bcf	11,2	;volatile
+   707     07C0                     i1l716:
    708                           
    709                           ;main.c: 29:         PORTBbits.RB1 = !PORTBbits.RB1;
-   710     0048  1003               	clrc
-   711     0049  1283               	bcf	3,5	;RP0=0, select bank0
-   712     004A  1C86               	btfss	6,1	;volatile
-   713     004B  1403               	setc
-   714     004C  1803               	btfsc	3,0
-   715     004D  284F               	goto	u7_21
-   716     004E  2853               	goto	u7_20
-   717     004F                     u7_21:
-   718     004F  1283               	bcf	3,5	;RP0=0, select bank0
-   719     0050  1303               	bcf	3,6	;RP1=0, select bank0
-   720     0051  1486               	bsf	6,1	;volatile
-   721     0052  2856               	goto	u8_24
-   722     0053                     u7_20:
-   723     0053  1283               	bcf	3,5	;RP0=0, select bank0
-   724     0054  1303               	bcf	3,6	;RP1=0, select bank0
-   725     0055  1086               	bcf	6,1	;volatile
-   726     0056                     u8_24:
-   727     0056                     i1l718:
+   710     07C0  1003               	clrc
+   711     07C1  1283               	bcf	3,5	;RP0=0, select bank0
+   712     07C2  1C86               	btfss	6,1	;volatile
+   713     07C3  1403               	setc
+   714     07C4  1803               	btfsc	3,0
+   715     07C5  2FC7               	goto	u7_21
+   716     07C6  2FCB               	goto	u7_20
+   717     07C7                     u7_21:
+   718     07C7  1283               	bcf	3,5	;RP0=0, select bank0
+   719     07C8  1303               	bcf	3,6	;RP1=0, select bank0
+   720     07C9  1486               	bsf	6,1	;volatile
+   721     07CA  2FCE               	goto	u8_24
+   722     07CB                     u7_20:
+   723     07CB  1283               	bcf	3,5	;RP0=0, select bank0
+   724     07CC  1303               	bcf	3,6	;RP1=0, select bank0
+   725     07CD  1086               	bcf	6,1	;volatile
+   726     07CE                     u8_24:
+   727     07CE                     i1l718:
    728                           
    729                           ;main.c: 30:         cont = cont+1;
-   730     0056  0878               	movf	_cont,w
-   731     0057  3E01               	addlw	1
-   732     0058  00F8               	movwf	_cont
-   733     0059  0879               	movf	_cont+1,w
-   734     005A  1803               	skipnc
-   735     005B  3E01               	addlw	1
-   736     005C  3E00               	addlw	0
-   737     005D  00F9               	movwf	_cont+1
-   738     005E                     i1l720:
+   730     07CE  0879               	movf	_cont,w
+   731     07CF  3E01               	addlw	1
+   732     07D0  00F9               	movwf	_cont
+   733     07D1  087A               	movf	_cont+1,w
+   734     07D2  1803               	skipnc
+   735     07D3  3E01               	addlw	1
+   736     07D4  3E00               	addlw	0
+   737     07D5  00FA               	movwf	_cont+1
+   738     07D6                     i1l720:
    739                           
    740                           ;main.c: 33:         if (cont <= duty1)
-   741     005E  0879               	movf	_cont+1,w
-   742     005F  0273               	subwf	_duty1+1,w
-   743     0060  1D03               	skipz
-   744     0061  2864               	goto	u9_25
-   745     0062  0878               	movf	_cont,w
-   746     0063  0272               	subwf	_duty1,w
-   747     0064                     u9_25:
-   748     0064  1C03               	skipc
-   749     0065  2867               	goto	u9_21
-   750     0066  2868               	goto	u9_20
-   751     0067                     u9_21:
-   752     0067  286A               	goto	i1l53
-   753     0068                     u9_20:
-   754     0068                     i1l722:
+   741     07D6  087A               	movf	_cont+1,w
+   742     07D7  0274               	subwf	_duty1+1,w
+   743     07D8  1D03               	skipz
+   744     07D9  2FDC               	goto	u9_25
+   745     07DA  0879               	movf	_cont,w
+   746     07DB  0273               	subwf	_duty1,w
+   747     07DC                     u9_25:
+   748     07DC  1C03               	skipc
+   749     07DD  2FDF               	goto	u9_21
+   750     07DE  2FE0               	goto	u9_20
+   751     07DF                     u9_21:
+   752     07DF  2FE2               	goto	i1l53
+   753     07E0                     u9_20:
+   754     07E0                     i1l722:
    755                           
    756                           ;main.c: 34:             PORTCbits.RC0 = 1;
-   757     0068  1407               	bsf	7,0	;volatile
-   758     0069  286B               	goto	i1l724
-   759     006A                     i1l53:	
+   757     07E0  1407               	bsf	7,0	;volatile
+   758     07E1  2FE3               	goto	i1l724
+   759     07E2                     i1l53:	
    760                           ;main.c: 35:         else
    761                           
    762                           
    763                           ;main.c: 36:             PORTCbits.RC0 = 0;
-   764     006A  1007               	bcf	7,0	;volatile
-   765     006B                     i1l724:
+   764     07E2  1007               	bcf	7,0	;volatile
+   765     07E3                     i1l724:
    766                           
    767                           ;main.c: 39:         if (cont <= duty2)
-   768     006B  0879               	movf	_cont+1,w
-   769     006C  0271               	subwf	_duty2+1,w
-   770     006D  1D03               	skipz
-   771     006E  2871               	goto	u10_25
-   772     006F  0878               	movf	_cont,w
-   773     0070  0270               	subwf	_duty2,w
-   774     0071                     u10_25:
-   775     0071  1C03               	skipc
-   776     0072  2874               	goto	u10_21
-   777     0073  2875               	goto	u10_20
-   778     0074                     u10_21:
-   779     0074  2877               	goto	i1l55
-   780     0075                     u10_20:
-   781     0075                     i1l726:
+   768     07E3  087A               	movf	_cont+1,w
+   769     07E4  0272               	subwf	_duty2+1,w
+   770     07E5  1D03               	skipz
+   771     07E6  2FE9               	goto	u10_25
+   772     07E7  0879               	movf	_cont,w
+   773     07E8  0271               	subwf	_duty2,w
+   774     07E9                     u10_25:
+   775     07E9  1C03               	skipc
+   776     07EA  2FEC               	goto	u10_21
+   777     07EB  2FED               	goto	u10_20
+   778     07EC                     u10_21:
+   779     07EC  2FEF               	goto	i1l55
+   780     07ED                     u10_20:
+   781     07ED                     i1l726:
    782                           
    783                           ;main.c: 40:             PORTCbits.RC1 = 1;
-   784     0075  1487               	bsf	7,1	;volatile
-   785     0076  2878               	goto	i1l728
-   786     0077                     i1l55:	
+   784     07ED  1487               	bsf	7,1	;volatile
+   785     07EE  2FF0               	goto	i1l728
+   786     07EF                     i1l55:	
    787                           ;main.c: 41:         else
    788                           
    789                           
    790                           ;main.c: 42:             PORTCbits.RC1 = 0;
-   791     0077  1087               	bcf	7,1	;volatile
-   792     0078                     i1l728:
+   791     07EF  1087               	bcf	7,1	;volatile
+   792     07F0                     i1l728:
    793                           
    794                           ;main.c: 45:         TMR0 = 256 - 125 + TMR0;
-   795     0078  0801               	movf	1,w	;volatile
-   796     0079  3E83               	addlw	131
-   797     007A  0081               	movwf	1	;volatile
-   798     007B                     i1l57:
-   799     007B  0877               	movf	??_myIsr+3,w
-   800     007C  008A               	movwf	10
-   801     007D  0E76               	swapf	??_myIsr+2,w
-   802     007E  0083               	movwf	3
-   803     007F  0EFE               	swapf	btemp,f
-   804     0080  0E7E               	swapf	btemp,w
-   805     0081  0009               	retfie
-   806     0082                     __end_of_myIsr:
+   795     07F0  0801               	movf	1,w	;volatile
+   796     07F1  3E83               	addlw	131
+   797     07F2  0081               	movwf	1	;volatile
+   798     07F3                     i1l57:
+   799     07F3  0878               	movf	??_myIsr+3,w
+   800     07F4  008A               	movwf	10
+   801     07F5  0E77               	swapf	??_myIsr+2,w
+   802     07F6  0083               	movwf	3
+   803     07F7  0EFE               	swapf	btemp,f
+   804     07F8  0E7E               	swapf	btemp,w
+   805     07F9  0009               	retfie
+   806     07FA                     __end_of_myIsr:
    807     007E                     btemp	set	126	;btemp
    808     007E                     wtemp0	set	126
    809                           
@@ -830,10 +830,10 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    816     007E                     saved_w	set	btemp
    817     0004  00FE               	movwf	btemp
    818     0005  0E03               	swapf	3,w
-   819     0006  00F6               	movwf	??_myIsr+2
+   819     0006  00F7               	movwf	??_myIsr+2
    820     0007  080A               	movf	10,w
-   821     0008  00F7               	movwf	??_myIsr+3
-   822     0009  120A  118A  2815   	ljmp	_myIsr
+   821     0008  00F8               	movwf	??_myIsr+3
+   822     0009  120A  118A  2F8D   	ljmp	_myIsr
    823                           
    824                           	psect	idloc
    825                           
@@ -891,10 +891,10 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      4      10
+    COMMON           13      4      10
     BANK0            80      0       0
     BANK1            80      0       0
-    BANK3            96      0       0
+    BANK3            85      0       0
     BANK2            96      0       0
 
 Pointer List with Targets:
@@ -970,11 +970,11 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMMON            E      0       0       0        0.0%
+BITCOMMON            D      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      4       A       1       71.4%
+COMMON               D      4       A       1       76.9%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -989,63 +989,63 @@ BITSFR2              0      0       0       5        0.0%
 SFR2                 0      0       0       5        0.0%
 BITBANK1            50      0       0       6        0.0%
 BANK1               50      0       0       7        0.0%
-BITBANK3            60      0       0       8        0.0%
-BANK3               60      0       0       9        0.0%
+BITBANK3            55      0       0       8        0.0%
+BANK3               55      0       0       9        0.0%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0       0      11        0.0%
 DATA                 0      0       A      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed Sep 13 09:05:44 2023
+Symbol Table                                                                                   Wed Sep 13 09:22:05 2023
 
-                     l60 011E                       l71 00AF                       l75 00C6  
-                     l67 0098                       l79 00DD                      l730 0082  
-                    l732 0083                      l750 00B3                      l742 009C  
-                    l734 0088                      l680 00FB                      l760 00D0  
-                    l752 00B9                      l744 00A2                      l736 0089  
-                    l690 010D                      l682 0103                      l762 00D4  
-                    l754 00BD                      l746 00A6                      l738 008F  
-                    l692 0111                      l684 0105                      l676 00EB  
-                    l694 0116                      l686 0107                      l678 00F9  
-                    l766 00E1                      l758 00CA                      l696 011A  
-                    l688 010B                      u110 008F                      u111 008E  
-                    u200 00D4                      u120 0098                      u201 00D3  
-                    u121 0097                      u210 00DD                      u130 009C  
-                    u211 00DC                      u131 009B                      u220 00E1  
-                    u140 00A6                      u221 00E0                      u141 00A5  
-                    u150 00AF                      u151 00AE                      u160 00B3  
-                    u161 00B2                      u170 00BD                      u171 00BC  
-                    u180 00C6                      u181 00C5                      u190 00CA  
-                    u191 00C9                     i1l53 006A                     i1l55 0077  
-                   i1l57 007B                     _TMR0 0001                     _TMR1 000E  
-                   u1_20 001B                     u1_21 001A                     u2_20 0021  
-                   u2_21 0020                     u3_20 002E                     u3_21 002A  
-                   u4_24 0031                     u5_20 0043                     u5_21 0042  
-                   u6_20 0047                     u6_21 0046                     u7_20 0053  
-                   u7_21 004F                     u8_24 0056                     u9_20 0068  
-                   u9_21 0067                     u9_25 0064                     _cont 0078  
-                   _main 0082                     _init 00EB                     btemp 007E  
-                   start 000C                    ?_main 0074                    ?_init 0074  
-                  _T1CON 0010                    i1l700 001B                    i1l702 0021  
-                  i1l710 003F                    i1l720 005E                    i1l712 0043  
-                  i1l704 0024                    i1l722 0068                    i1l714 0047  
-                  i1l706 0031                    i1l724 006B                    i1l716 0048  
-                  i1l708 0033                    i1l726 0075                    i1l718 0056  
-                  i1l728 0078                    i1l698 0015                    u10_20 0075  
-                  u10_21 0074                    u10_25 0071                    _PORTA 0005  
+                     l60 0723                       l71 0751                       l75 0768  
+                     l67 073A                       l79 077F                      l730 0724  
+                    l732 0725                      l750 0755                      l742 073E  
+                    l734 072A                      l680 0700                      l760 0772  
+                    l752 075B                      l744 0744                      l736 072B  
+                    l690 0712                      l682 0708                      l762 0776  
+                    l754 075F                      l746 0748                      l738 0731  
+                    l692 0716                      l684 070A                      l676 06F0  
+                    l694 071B                      l686 070C                      l678 06FE  
+                    l766 0783                      l758 076C                      l696 071F  
+                    l688 0710                      u110 0731                      u111 0730  
+                    u200 0776                      u120 073A                      u201 0775  
+                    u121 0739                      u210 077F                      u130 073E  
+                    u211 077E                      u131 073D                      u220 0783  
+                    u140 0748                      u221 0782                      u141 0747  
+                    u150 0751                      u151 0750                      u160 0755  
+                    u161 0754                      u170 075F                      u171 075E  
+                    u180 0768                      u181 0767                      u190 076C  
+                    u191 076B                     i1l53 07E2                     i1l55 07EF  
+                   i1l57 07F3                     _TMR0 0001                     _TMR1 000E  
+                   u1_20 0793                     u1_21 0792                     u2_20 0799  
+                   u2_21 0798                     u3_20 07A6                     u3_21 07A2  
+                   u4_24 07A9                     u5_20 07BB                     u5_21 07BA  
+                   u6_20 07BF                     u6_21 07BE                     u7_20 07CB  
+                   u7_21 07C7                     u8_24 07CE                     u9_20 07E0  
+                   u9_21 07DF                     u9_25 07DC                     _cont 0079  
+                   _main 0724                     _init 06F0                     btemp 007E  
+                   start 000C                    ?_main 0075                    ?_init 0075  
+                  _T1CON 0010                    i1l700 0793                    i1l702 0799  
+                  i1l710 07B7                    i1l720 07D6                    i1l712 07BB  
+                  i1l704 079C                    i1l722 07E0                    i1l714 07BF  
+                  i1l706 07A9                    i1l724 07E3                    i1l716 07C0  
+                  i1l708 07AB                    i1l726 07ED                    i1l718 07CE  
+                  i1l728 07F0                    i1l698 078D                    u10_20 07ED  
+                  u10_21 07EC                    u10_25 07E9                    _PORTA 0005  
                   _PORTB 0006                    _PORTC 0007                    _PORTD 0008  
                   _PORTE 0009                    _TRISA 0085                    _TRISB 0086  
                   _TRISC 0087                    _TRISD 0088                    _TRISE 0089  
-                  _duty1 0072                    _duty2 0070                    _myIsr 0015  
+                  _duty1 0073                    _duty2 0071                    _myIsr 078D  
                   pclath 000A                    status 0003                    wtemp0 007E  
-        __initialization 000F             __end_of_main 00EB             __end_of_init 011F  
-                 ??_main 0078                   ??_init 0078                   ?_myIsr 0074  
-                 _INTCON 000B                   saved_w 007E  __end_of__initialization 0011  
-         __pcstackCOMMON 0074            __end_of_myIsr 0082                  ??_myIsr 0074  
-             __pnvCOMMON 0070               __pmaintext 0082               __pintentry 0004  
-                __ptext1 00EB                  __ptext2 0015     end_of_initialization 0011  
-              _PORTBbits 0006                _PORTCbits 0007      start_initialization 000F  
-            __pbssCOMMON 0078                ___latbits 0002        interrupt_function 0004  
+        __initialization 07FA             __end_of_main 078D             __end_of_init 0724  
+                 ??_main 0079                   ??_init 0079                   ?_myIsr 0075  
+                 _INTCON 000B                   saved_w 007E  __end_of__initialization 07FC  
+         __pcstackCOMMON 0075            __end_of_myIsr 07FA                  ??_myIsr 0075  
+             __pnvCOMMON 0071               __pmaintext 0724               __pintentry 0004  
+                __ptext1 06F0                  __ptext2 078D     end_of_initialization 07FC  
+              _PORTBbits 0006                _PORTCbits 0007      start_initialization 07FA  
+            __pbssCOMMON 0079                ___latbits 0002        interrupt_function 0004  
                _PIE1bits 008C                 _PIR1bits 000C               _INTCONbits 000B  
                intlevel1 0000               _OPTION_REG 0081  

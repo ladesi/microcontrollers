@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed Sep 13 09:25:06 2023
+                                                                                               Wed Sep 13 09:22:28 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F877A
@@ -203,24 +203,24 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    189     07FD  120A  118A  2FB5   	ljmp	_main	;jump to C main() function
    190                           
    191                           	psect	cstackCOMMON
-   192     0070                     __pcstackCOMMON:
-   193     0070                     ?_init:
-   194     0070                     ??_init:	
+   192     0071                     __pcstackCOMMON:
+   193     0071                     ?_init:
+   194     0071                     ??_init:	
    195                           ; 1 bytes @ 0x0
    196                           
-   197     0070                     ?_blink_led:	
+   197     0071                     ?_blink_led:	
    198                           ; 1 bytes @ 0x0
    199                           
-   200     0070                     ??_blink_led:	
+   200     0071                     ??_blink_led:	
    201                           ; 1 bytes @ 0x0
    202                           
-   203     0070                     ?_main:	
+   203     0071                     ?_main:	
    204                           ; 1 bytes @ 0x0
    205                           
    206                           
    207                           ; 1 bytes @ 0x0
-   208     0070                     	ds	3
-   209     0073                     ??_main:
+   208     0071                     	ds	3
+   209     0074                     ??_main:
    210                           
    211                           	psect	maintext
    212     07B5                     __pmaintext:	
@@ -275,7 +275,7 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    261                           ;main.c: 74:     {;main.c: 76:         blink_led();
    262     07BA  120A  118A  27DB  120A  118A  	fcall	_blink_led
    263     07BF  2FBA               	goto	l44
-   264     07C0  120A  118A  2800   	ljmp	start
+   264     07C0  120A  118A  2801   	ljmp	start
    265     07C3                     __end_of_main:
    266                           
    267                           	psect	text1
@@ -414,17 +414,17 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    400                           
    401                           ;main.c: 37:     _delay((unsigned long)((500)*(20000000/4000.0)));
    402     07DE  300D               	movlw	13
-   403     07DF  00F2               	movwf	??_blink_led+2
+   403     07DF  00F3               	movwf	??_blink_led+2
    404     07E0  30AF               	movlw	175
-   405     07E1  00F1               	movwf	??_blink_led+1
+   405     07E1  00F2               	movwf	??_blink_led+1
    406     07E2  30B6               	movlw	182
-   407     07E3  00F0               	movwf	??_blink_led
+   407     07E3  00F1               	movwf	??_blink_led
    408     07E4                     u37:
-   409     07E4  0BF0               	decfsz	??_blink_led,f
+   409     07E4  0BF1               	decfsz	??_blink_led,f
    410     07E5  2FE4               	goto	u37
-   411     07E6  0BF1               	decfsz	??_blink_led+1,f
+   411     07E6  0BF2               	decfsz	??_blink_led+1,f
    412     07E7  2FE4               	goto	u37
-   413     07E8  0BF2               	decfsz	??_blink_led+2,f
+   413     07E8  0BF3               	decfsz	??_blink_led+2,f
    414     07E9  2FE4               	goto	u37
    415     07EA  0000               	nop
    416     07EB                     l653:
@@ -436,17 +436,17 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    422                           
    423                           ;main.c: 39:     _delay((unsigned long)((500)*(20000000/4000.0)));
    424     07EE  300D               	movlw	13
-   425     07EF  00F2               	movwf	??_blink_led+2
+   425     07EF  00F3               	movwf	??_blink_led+2
    426     07F0  30AF               	movlw	175
-   427     07F1  00F1               	movwf	??_blink_led+1
+   427     07F1  00F2               	movwf	??_blink_led+1
    428     07F2  30B6               	movlw	182
-   429     07F3  00F0               	movwf	??_blink_led
+   429     07F3  00F1               	movwf	??_blink_led
    430     07F4                     u47:
-   431     07F4  0BF0               	decfsz	??_blink_led,f
+   431     07F4  0BF1               	decfsz	??_blink_led,f
    432     07F5  2FF4               	goto	u47
-   433     07F6  0BF1               	decfsz	??_blink_led+1,f
+   433     07F6  0BF2               	decfsz	??_blink_led+1,f
    434     07F7  2FF4               	goto	u47
-   435     07F8  0BF2               	decfsz	??_blink_led+2,f
+   435     07F8  0BF3               	decfsz	??_blink_led+2,f
    436     07F9  2FF4               	goto	u47
    437     07FA  0000               	nop
    438     07FB                     l30:
@@ -511,10 +511,10 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      3       3
+    COMMON           13      3       3
     BANK0            80      0       0
     BANK1            80      0       0
-    BANK3            96      0       0
+    BANK3            85      0       0
     BANK2            96      0       0
 
 Pointer List with Targets:
@@ -566,11 +566,11 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMMON            E      0       0       0        0.0%
+BITCOMMON            D      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      3       3       1       21.4%
+COMMON               D      3       3       1       23.1%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -585,30 +585,30 @@ BITSFR2              0      0       0       5        0.0%
 SFR2                 0      0       0       5        0.0%
 BITBANK1            50      0       0       6        0.0%
 BANK1               50      0       0       7        0.0%
-BITBANK3            60      0       0       8        0.0%
-BANK3               60      0       0       9        0.0%
+BITBANK3            55      0       0       8        0.0%
+BANK3               55      0       0       9        0.0%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0       0      11        0.0%
 DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed Sep 13 09:25:06 2023
+Symbol Table                                                                                   Wed Sep 13 09:22:28 2023
 
                      l30 07FB                       l27 07DA                       l44 07BA  
                      u37 07E4                       u47 07F4                      l641 07D1  
                     l651 07DE                      l643 07D3                      l653 07EB  
                     l645 07D4                      l647 07D7                      l639 07C3  
                     l671 07B5                      l649 07DB                     _main 07B5  
-                   _init 07C3                     btemp 007E                     start 0000  
-                  ?_main 0070                    ?_init 0070                    _PORTA 0005  
+                   _init 07C3                     btemp 007E                     start 0001  
+                  ?_main 0071                    ?_init 0071                    _PORTA 0005  
                   _PORTB 0006                    _PORTC 0007                    _PORTD 0008  
                   _PORTE 0009                    _TRISA 0085                    _TRISB 0086  
                   _TRISC 0087                    _TRISD 0088                    _TRISE 0089  
                   status 0003                    wtemp0 007E          __initialization 07FC  
-           __end_of_main 07C3             __end_of_init 07DB                   ??_main 0073  
-                 ??_init 0070  __end_of__initialization 07FC           __pcstackCOMMON 0070  
+           __end_of_main 07C3             __end_of_init 07DB                   ??_main 0074  
+                 ??_init 0071  __end_of__initialization 07FC           __pcstackCOMMON 0071  
              __pmaintext 07B5        __end_of_blink_led 07FC                  __ptext1 07C3  
                 __ptext2 07DB     end_of_initialization 07FC                _PORTBbits 0006  
     start_initialization 07FC                ___latbits 0002                _blink_led 07DB  
-             ?_blink_led 0070              ??_blink_led 0070  
+             ?_blink_led 0071              ??_blink_led 0071  

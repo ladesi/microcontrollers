@@ -1,25 +1,30 @@
-Microchip MPLAB XC8 Compiler V2.32
+Microchip MPLAB XC8 Compiler V2.41
 
 Linker command line:
 
--W-3 --edf=C:\Program Files\Microchip\xc8\v2.32\pic\dat\en_msgs.txt -cn \
+-W-3 \
+  --edf=C:\Program Files\Microchip\xc8\v2.41\pic\dat\20230208172133_en.msgs \
+  -cn \
   -h+dist/default/production\io_button_led_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.sym \
   --cmf=dist/default/production\io_button_led_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.cmf \
-  -z -Q16F877A -oC:\Users\david\AppData\Local\Temp\xcAsecg.4 \
-  --defsym=__MPLAB_BUILD=1 \
+  -z -Q16F877A \
+  -oC:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbq8.\driver_tmp_3.o \
+  --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/io_button_led_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.map \
-  -E1 -ver=XC8 Compiler --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK \
-  -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 \
-  -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 -ACOMMON=070h-07Fh \
-  -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0110h-016Fh \
-  -ABANK3=0190h-01EFh -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
+  --md=C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbq8.\driver_tmp_0.dat -E1 \
+  -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
+  -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
+  -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
+  -ABANK2=0110h-016Fh -ABANK3=0190h-01EFh \
+  -ARAM=020h-06Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh \
   -AABS1=020h-07Fh,0A0h-0EFh,0110h-016Fh,0190h-01EFh -ASFR0=00h-01Fh \
   -ASFR1=080h-09Fh -ASFR2=0100h-010Fh -ASFR3=0180h-018Fh \
   -ACONFIG=02007h-02007h -DCONFIG=2 -AIDLOC=02000h-02003h -DIDLOC=2 \
   -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 -DCODE=2 \
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\david\AppData\Local\Temp\xcAsecg.o \
+  -pfunctab=ENTRY -k \
+  C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbq8.\driver_tmp_12.o \
   dist/default/production\io_button_led_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o 
 
 Object code version is 3.11
@@ -29,20 +34,20 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\david\AppData\Local\Temp\xcAsecg.o
+C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbq8.\driver_tmp_12.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
+                idloc                              2000     2000        4        0       5
 dist/default/production\io_button_led_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
                 cinit                               7FC      7FC        4      FF8       0
                 config                             2007     2007        1        0       4
+                idloc                              2000     2000        4        0       5
                 text2                               7DB      7DB       21      FB6       0
                 text1                               7C3      7C3       18      F86       0
                 maintext                            7B5      7B5        E      F6A       0
                 cstackCOMMON                         70       70        3       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
-        CLASS   STACK          
-
         CLASS   CODE           
                 end_init                              0        0        3         0
                 cinit                               7FC      7FC        4         0
@@ -86,8 +91,11 @@ TOTAL           Name                               Link     Load   Length     Sp
                 config                             2007     2007        1         4
 
         CLASS   IDLOC          
+                idloc                              2000     2000        4         5
 
         CLASS   EEDATA         
+
+        CLASS   STACK          
 
 
 
@@ -116,7 +124,6 @@ UNUSED ADDRESS RANGES
         EEDATA           2100-21FF            100           2
         ENTRY            0003-07B4            100           2
                          0800-1FFF            100
-        IDLOC            2000-2003              4           2
         RAM              0020-006F             50           1
                          00A0-00EF             50
                          0110-016F             60
@@ -125,7 +132,6 @@ UNUSED ADDRESS RANGES
         SFR1             0080-009F             20           1
         SFR2             0100-010F             10           1
         SFR3             0180-018F             10           1
-        STACK            0110-016F             60           1
         STRCODE          0003-07B4            7B2           2
                          0800-1FFF           1800
         STRING           0003-07B4            100           2
@@ -144,6 +150,7 @@ _TRISB                   (abs)        0086
 _TRISC                   (abs)        0087
 _TRISD                   (abs)        0088
 _TRISE                   (abs)        0089
+__H__absolute__          __absolute__ 0000
 __Habs1                  abs1         0000
 __Hbank0                 bank0        0000
 __Hbank1                 bank1        0000
@@ -158,6 +165,7 @@ __HcstackCOMMON          cstackCOMMON 0000
 __Heeprom_data           eeprom_data  0000
 __Hend_init              end_init     0003
 __Hfunctab               functab      0000
+__Hidloc                 idloc        2004
 __Hinit                  init         0000
 __Hintentry              intentry     0000
 __Hmaintext              maintext     0000
@@ -176,6 +184,7 @@ __Hspace_4               (abs)        400F
 __Hstack                 stack        0000
 __Hstrings               strings      0000
 __Htext                  text         0000
+__L__absolute__          __absolute__ 0000
 __Labs1                  abs1         0000
 __Lbank0                 bank0        0000
 __Lbank1                 bank1        0000
@@ -190,6 +199,7 @@ __LcstackCOMMON          cstackCOMMON 0000
 __Leeprom_data           eeprom_data  0000
 __Lend_init              end_init     0000
 __Lfunctab               functab      0000
+__Lidloc                 idloc        0000
 __Linit                  init         0000
 __Lintentry              intentry     0000
 __Lmaintext              maintext     0000
@@ -210,7 +220,6 @@ __Lstrings               strings      0000
 __Ltext                  text         0000
 __S0                     (abs)        0800
 __S1                     (abs)        0073
-__S2                     (abs)        0000
 __S3                     (abs)        0000
 ___int_sp                stack        0000
 ___latbits               (abs)        0002
@@ -226,9 +235,6 @@ __pcstackCOMMON          cstackCOMMON 0070
 __pmaintext              maintext     07B5
 __ptext1                 text1        07C3
 __ptext2                 text2        07DB
-__size_of_blink_led      (abs)        0000
-__size_of_init           (abs)        0000
-__size_of_main           (abs)        0000
 _blink_led               text2        07DB
 _init                    text1        07C3
 _main                    maintext     07B5
