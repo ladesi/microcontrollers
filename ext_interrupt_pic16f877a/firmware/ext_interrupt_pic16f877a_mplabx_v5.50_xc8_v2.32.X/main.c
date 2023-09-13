@@ -2,7 +2,9 @@
  * PIC16F877A Samples
  * Sample 04: External Interrupt
  * Author: David Nascimento Coelho
+ * Review: Luan Gomes Magalhães Lima
  * Last Update: 2022/01/25
+ * Last Review: 2023/09/13
  */
 
 // LIBRARIES INCLUDE

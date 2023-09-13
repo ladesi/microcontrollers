@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.41 build 20230208172133 
-                                                                                               Wed Sep 13 09:35:14 2023
+                                                                                               Wed Sep 13 09:32:47 2023
 
 Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1 
      1                           	processor	16F877A
@@ -195,39 +195,39 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    181     0088                     _TRISD	set	136
    182                           
    183                           	psect	cinit
-   184     000F                     start_initialization:	
+   184     07FC                     start_initialization:	
    185                           ; #config settings
    186                           
-   187     000F                     __initialization:
-   188     000F                     end_of_initialization:	
+   187     07FC                     __initialization:
+   188     07FC                     end_of_initialization:	
    189                           ;End of C runtime variable initialization code
    190                           
-   191     000F                     __end_of__initialization:
-   192     000F  0183               	clrf	3
-   193     0010  120A  118A  284E   	ljmp	_main	;jump to C main() function
+   191     07FC                     __end_of__initialization:
+   192     07FC  0183               	clrf	3
+   193     07FD  120A  118A  2FB6   	ljmp	_main	;jump to C main() function
    194                           
    195                           	psect	cstackCOMMON
-   196     0070                     __pcstackCOMMON:
-   197     0070                     ?_myIsr:
-   198     0070                     ??_myIsr:	
+   196     0071                     __pcstackCOMMON:
+   197     0071                     ?_myIsr:
+   198     0071                     ??_myIsr:	
    199                           ; 1 bytes @ 0x0
    200                           
-   201     0070                     ?_init:	
+   201     0071                     ?_init:	
    202                           ; 1 bytes @ 0x0
    203                           
-   204     0070                     ?_main:	
+   204     0071                     ?_main:	
    205                           ; 1 bytes @ 0x0
    206                           
    207                           
    208                           ; 1 bytes @ 0x0
-   209     0070                     	ds	2
-   210     0072                     ??_init:
-   211     0072                     ??_main:	
+   209     0071                     	ds	2
+   210     0073                     ??_init:
+   211     0073                     ??_main:	
    212                           ; 1 bytes @ 0x2
    213                           
    214                           
    215                           	psect	maintext
-   216     004E                     __pmaintext:	
+   216     07B6                     __pmaintext:	
    217                           ; 1 bytes @ 0x2
    218 ;;
    219 ;;Main: autosize = 0, tempsize = 0, incstack = 0, save=0
@@ -261,36 +261,36 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    247 ;; This function uses a non-reentrant model
    248 ;;
    249                           
-   250     004E                     _main:	
+   250     07B6                     _main:	
    251                           ;psect for function _main
    252                           
-   253     004E                     l655:	
+   253     07B6                     l655:	
    254                           ;incstack = 0
    255                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    256                           
    257                           
    258                           ;main.c: 73:     INTCONbits.GIE = 0;
-   259     004E  138B               	bcf	11,7	;volatile
-   260     004F                     l657:
+   259     07B6  138B               	bcf	11,7	;volatile
+   260     07B7                     l657:
    261                           
    262                           ;main.c: 76:     init();
-   263     004F  120A  118A  2032  120A  118A  	fcall	_init
-   264     0054                     l659:
+   263     07B7  120A  118A  27C1  120A  118A  	fcall	_init
+   264     07BC                     l659:
    265                           
    266                           ;main.c: 79:     INTCONbits.GIE = 1;
-   267     0054  178B               	bsf	11,7	;volatile
-   268     0055                     l42:	
+   267     07BC  178B               	bsf	11,7	;volatile
+   268     07BD                     l42:	
    269                           ;main.c: 82:     while(1)
    270                           
-   271     0055                     l43:	
+   271     07BD                     l43:	
    272                           ;main.c: 83:     {;main.c: 85:     }
    273                           
-   274     0055  2855               	goto	l42
-   275     0056  120A  118A  280C   	ljmp	start
-   276     0059                     __end_of_main:
+   274     07BD  2FBD               	goto	l42
+   275     07BE  120A  118A  280C   	ljmp	start
+   276     07C1                     __end_of_main:
    277                           
    278                           	psect	text1
-   279     0032                     __ptext1:	
+   279     07C1                     __ptext1:	
    280 ;; *************** function _init *****************
    281 ;; Defined at:
    282 ;;		line 29 in file "main.c"
@@ -321,74 +321,74 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    307 ;; This function uses a non-reentrant model
    308 ;;
    309                           
-   310     0032                     _init:	
+   310     07C1                     _init:	
    311                           ;psect for function _init
    312                           
-   313     0032                     l637:	
+   313     07C1                     l637:	
    314                           ;incstack = 0
    315                           ; Regs used in _init: [wreg+status,2]
    316                           
    317                           
    318                           ;main.c: 32:     PORTA = 0b00000000;
-   319     0032  1283               	bcf	3,5	;RP0=0, select bank0
-   320     0033  1303               	bcf	3,6	;RP1=0, select bank0
-   321     0034  0185               	clrf	5	;volatile
+   319     07C1  1283               	bcf	3,5	;RP0=0, select bank0
+   320     07C2  1303               	bcf	3,6	;RP1=0, select bank0
+   321     07C3  0185               	clrf	5	;volatile
    322                           
    323                           ;main.c: 33:     PORTB = 0b00000000;
-   324     0035  0186               	clrf	6	;volatile
+   324     07C4  0186               	clrf	6	;volatile
    325                           
    326                           ;main.c: 34:     PORTC = 0b00000000;
-   327     0036  0187               	clrf	7	;volatile
+   327     07C5  0187               	clrf	7	;volatile
    328                           
    329                           ;main.c: 35:     TRISD = 0b00000000;
-   330     0037  1683               	bsf	3,5	;RP0=1, select bank1
-   331     0038  1303               	bcf	3,6	;RP1=0, select bank1
-   332     0039  0188               	clrf	8	;volatile
+   330     07C6  1683               	bsf	3,5	;RP0=1, select bank1
+   331     07C7  1303               	bcf	3,6	;RP1=0, select bank1
+   332     07C8  0188               	clrf	8	;volatile
    333                           
    334                           ;main.c: 36:     PORTE = 0b00000000;
-   335     003A  1283               	bcf	3,5	;RP0=0, select bank0
-   336     003B  1303               	bcf	3,6	;RP1=0, select bank0
-   337     003C  0189               	clrf	9	;volatile
+   335     07C9  1283               	bcf	3,5	;RP0=0, select bank0
+   336     07CA  1303               	bcf	3,6	;RP1=0, select bank0
+   337     07CB  0189               	clrf	9	;volatile
    338                           
    339                           ;main.c: 38:     TRISA = 0b00000000;
-   340     003D  1683               	bsf	3,5	;RP0=1, select bank1
-   341     003E  1303               	bcf	3,6	;RP1=0, select bank1
-   342     003F  0185               	clrf	5	;volatile
-   343     0040                     l639:
+   340     07CC  1683               	bsf	3,5	;RP0=1, select bank1
+   341     07CD  1303               	bcf	3,6	;RP1=0, select bank1
+   342     07CE  0185               	clrf	5	;volatile
+   343     07CF                     l639:
    344                           
    345                           ;main.c: 39:     TRISB = 0b00000001;
-   346     0040  3001               	movlw	1
-   347     0041  0086               	movwf	6	;volatile
-   348     0042                     l641:
+   346     07CF  3001               	movlw	1
+   347     07D0  0086               	movwf	6	;volatile
+   348     07D1                     l641:
    349                           
    350                           ;main.c: 40:     TRISC = 0b00000000;
-   351     0042  0187               	clrf	7	;volatile
-   352     0043                     l643:
+   351     07D1  0187               	clrf	7	;volatile
+   352     07D2                     l643:
    353                           
    354                           ;main.c: 41:     PORTD = 0b00000000;
-   355     0043  1283               	bcf	3,5	;RP0=0, select bank0
-   356     0044  1303               	bcf	3,6	;RP1=0, select bank0
-   357     0045  0188               	clrf	8	;volatile
-   358     0046                     l645:
+   355     07D2  1283               	bcf	3,5	;RP0=0, select bank0
+   356     07D3  1303               	bcf	3,6	;RP1=0, select bank0
+   357     07D4  0188               	clrf	8	;volatile
+   358     07D5                     l645:
    359                           
    360                           ;main.c: 42:     TRISE = 0b00000000;
-   361     0046  1683               	bsf	3,5	;RP0=1, select bank1
-   362     0047  1303               	bcf	3,6	;RP1=0, select bank1
-   363     0048  0189               	clrf	9	;volatile
+   361     07D5  1683               	bsf	3,5	;RP0=1, select bank1
+   362     07D6  1303               	bcf	3,6	;RP1=0, select bank1
+   363     07D7  0189               	clrf	9	;volatile
    364                           
    365                           ;main.c: 45:     OPTION_REG = 0b10000011;
-   366     0049  3083               	movlw	131
-   367     004A  0081               	movwf	1	;volatile
+   366     07D8  3083               	movlw	131
+   367     07D9  0081               	movwf	1	;volatile
    368                           
    369                           ;main.c: 56:     INTCON = 0b00010000;
-   370     004B  3010               	movlw	16
-   371     004C  008B               	movwf	11	;volatile
-   372     004D                     l37:
-   373     004D  0008               	return
-   374     004E                     __end_of_init:
+   370     07DA  3010               	movlw	16
+   371     07DB  008B               	movwf	11	;volatile
+   372     07DC                     l37:
+   373     07DC  0008               	return
+   374     07DD                     __end_of_init:
    375                           
    376                           	psect	text2
-   377     0013                     __ptext2:	
+   377     07DD                     __ptext2:	
    378 ;; *************** function _myIsr *****************
    379 ;; Defined at:
    380 ;;		line 18 in file "main.c"
@@ -418,59 +418,59 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    404 ;; This function uses a non-reentrant model
    405 ;;
    406                           
-   407     0013                     _myIsr:	
+   407     07DD                     _myIsr:	
    408                           ;psect for function _myIsr
    409                           
-   410     0013                     i1l647:
+   410     07DD                     i1l647:
    411                           
    412                           ;main.c: 21:     if(INTCONbits.INTE && INTCONbits.INTF)
-   413     0013  1E0B               	btfss	11,4	;volatile
-   414     0014  2816               	goto	u1_21
-   415     0015  2817               	goto	u1_20
-   416     0016                     u1_21:
-   417     0016  282B               	goto	i1l34
-   418     0017                     u1_20:
-   419     0017                     i1l649:
-   420     0017  1C8B               	btfss	11,1	;volatile
-   421     0018  281A               	goto	u2_21
-   422     0019  281B               	goto	u2_20
-   423     001A                     u2_21:
-   424     001A  282B               	goto	i1l34
-   425     001B                     u2_20:
-   426     001B                     i1l651:
+   413     07DD  1E0B               	btfss	11,4	;volatile
+   414     07DE  2FE0               	goto	u1_21
+   415     07DF  2FE1               	goto	u1_20
+   416     07E0                     u1_21:
+   417     07E0  2FF5               	goto	i1l34
+   418     07E1                     u1_20:
+   419     07E1                     i1l649:
+   420     07E1  1C8B               	btfss	11,1	;volatile
+   421     07E2  2FE4               	goto	u2_21
+   422     07E3  2FE5               	goto	u2_20
+   423     07E4                     u2_21:
+   424     07E4  2FF5               	goto	i1l34
+   425     07E5                     u2_20:
+   426     07E5                     i1l651:
    427                           
    428                           ;main.c: 22:     {;main.c: 23:         INTCONbits.INTF = 0;
-   429     001B  108B               	bcf	11,1	;volatile
-   430     001C                     i1l653:
+   429     07E5  108B               	bcf	11,1	;volatile
+   430     07E6                     i1l653:
    431                           
    432                           ;main.c: 24:         PORTBbits.RB1 = !PORTBbits.RB1;
-   433     001C  1003               	clrc
-   434     001D  1283               	bcf	3,5	;RP0=0, select bank0
-   435     001E  1303               	bcf	3,6	;RP1=0, select bank0
-   436     001F  1C86               	btfss	6,1	;volatile
-   437     0020  1403               	setc
-   438     0021  1803               	btfsc	3,0
-   439     0022  2824               	goto	u3_21
-   440     0023  2828               	goto	u3_20
-   441     0024                     u3_21:
-   442     0024  1283               	bcf	3,5	;RP0=0, select bank0
-   443     0025  1303               	bcf	3,6	;RP1=0, select bank0
-   444     0026  1486               	bsf	6,1	;volatile
-   445     0027  282B               	goto	u4_24
-   446     0028                     u3_20:
-   447     0028  1283               	bcf	3,5	;RP0=0, select bank0
-   448     0029  1303               	bcf	3,6	;RP1=0, select bank0
-   449     002A  1086               	bcf	6,1	;volatile
-   450     002B                     u4_24:
-   451     002B                     i1l34:
-   452     002B  0871               	movf	??_myIsr+1,w
-   453     002C  008A               	movwf	10
-   454     002D  0E70               	swapf	??_myIsr,w
-   455     002E  0083               	movwf	3
-   456     002F  0EFE               	swapf	btemp,f
-   457     0030  0E7E               	swapf	btemp,w
-   458     0031  0009               	retfie
-   459     0032                     __end_of_myIsr:
+   433     07E6  1003               	clrc
+   434     07E7  1283               	bcf	3,5	;RP0=0, select bank0
+   435     07E8  1303               	bcf	3,6	;RP1=0, select bank0
+   436     07E9  1C86               	btfss	6,1	;volatile
+   437     07EA  1403               	setc
+   438     07EB  1803               	btfsc	3,0
+   439     07EC  2FEE               	goto	u3_21
+   440     07ED  2FF2               	goto	u3_20
+   441     07EE                     u3_21:
+   442     07EE  1283               	bcf	3,5	;RP0=0, select bank0
+   443     07EF  1303               	bcf	3,6	;RP1=0, select bank0
+   444     07F0  1486               	bsf	6,1	;volatile
+   445     07F1  2FF5               	goto	u4_24
+   446     07F2                     u3_20:
+   447     07F2  1283               	bcf	3,5	;RP0=0, select bank0
+   448     07F3  1303               	bcf	3,6	;RP1=0, select bank0
+   449     07F4  1086               	bcf	6,1	;volatile
+   450     07F5                     u4_24:
+   451     07F5                     i1l34:
+   452     07F5  0872               	movf	??_myIsr+1,w
+   453     07F6  008A               	movwf	10
+   454     07F7  0E71               	swapf	??_myIsr,w
+   455     07F8  0083               	movwf	3
+   456     07F9  0EFE               	swapf	btemp,f
+   457     07FA  0E7E               	swapf	btemp,w
+   458     07FB  0009               	retfie
+   459     07FC                     __end_of_myIsr:
    460     007E                     btemp	set	126	;btemp
    461     007E                     wtemp0	set	126
    462                           
@@ -483,10 +483,10 @@ Microchip MPLAB XC8 C Compiler v2.41 (Free license) build 20230208172133 Og1
    469     007E                     saved_w	set	btemp
    470     0004  00FE               	movwf	btemp
    471     0005  0E03               	swapf	3,w
-   472     0006  00F0               	movwf	??_myIsr
+   472     0006  00F1               	movwf	??_myIsr
    473     0007  080A               	movf	10,w
-   474     0008  00F1               	movwf	??_myIsr+1
-   475     0009  120A  118A  2813   	ljmp	_myIsr
+   474     0008  00F2               	movwf	??_myIsr+1
+   475     0009  120A  118A  2FDD   	ljmp	_myIsr
    476                           
    477                           	psect	idloc
    478                           
@@ -544,10 +544,10 @@ Data Sizes:
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14      2       2
+    COMMON           13      2       2
     BANK0            80      0       0
     BANK1            80      0       0
-    BANK3            96      0       0
+    BANK3            85      0       0
     BANK2            96      0       0
 
 Pointer List with Targets:
@@ -623,11 +623,11 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BITCOMMON            E      0       0       0        0.0%
+BITCOMMON            D      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      2       2       1       14.3%
+COMMON               D      2       2       1       15.4%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
@@ -642,36 +642,36 @@ BITSFR2              0      0       0       5        0.0%
 SFR2                 0      0       0       5        0.0%
 BITBANK1            50      0       0       6        0.0%
 BANK1               50      0       0       7        0.0%
-BITBANK3            60      0       0       8        0.0%
-BANK3               60      0       0       9        0.0%
+BITBANK3            55      0       0       8        0.0%
+BANK3               55      0       0       9        0.0%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0       0      11        0.0%
 DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.41 build 20230208172133 
-Symbol Table                                                                                   Wed Sep 13 09:35:14 2023
+Symbol Table                                                                                   Wed Sep 13 09:32:47 2023
 
-                     l42 0055                       l43 0055                       l37 004D  
-                    l641 0042                      l643 0043                      l645 0046  
-                    l637 0032                      l639 0040                      l655 004E  
-                    l657 004F                      l659 0054                     i1l34 002B  
-                   u1_20 0017                     u1_21 0016                     u2_20 001B  
-                   u2_21 001A                     u3_20 0028                     u3_21 0024  
-                   u4_24 002B                     _main 004E                     _init 0032  
-                   btemp 007E                     start 000C                    ?_main 0070  
-                  ?_init 0070                    i1l651 001B                    i1l653 001C  
-                  i1l647 0013                    i1l649 0017                    _PORTA 0005  
+                     l42 07BD                       l43 07BD                       l37 07DC  
+                    l641 07D1                      l643 07D2                      l645 07D5  
+                    l637 07C1                      l639 07CF                      l655 07B6  
+                    l657 07B7                      l659 07BC                     i1l34 07F5  
+                   u1_20 07E1                     u1_21 07E0                     u2_20 07E5  
+                   u2_21 07E4                     u3_20 07F2                     u3_21 07EE  
+                   u4_24 07F5                     _main 07B6                     _init 07C1  
+                   btemp 007E                     start 000C                    ?_main 0071  
+                  ?_init 0071                    i1l651 07E5                    i1l653 07E6  
+                  i1l647 07DD                    i1l649 07E1                    _PORTA 0005  
                   _PORTB 0006                    _PORTC 0007                    _PORTD 0008  
                   _PORTE 0009                    _TRISA 0085                    _TRISB 0086  
                   _TRISC 0087                    _TRISD 0088                    _TRISE 0089  
-                  _myIsr 0013                    pclath 000A                    status 0003  
-                  wtemp0 007E          __initialization 000F             __end_of_main 0059  
-           __end_of_init 004E                   ??_main 0072                   ??_init 0072  
-                 ?_myIsr 0070                   _INTCON 000B                   saved_w 007E  
-__end_of__initialization 000F           __pcstackCOMMON 0070            __end_of_myIsr 0032  
-                ??_myIsr 0070               __pmaintext 004E               __pintentry 0004  
-                __ptext1 0032                  __ptext2 0013     end_of_initialization 000F  
-              _PORTBbits 0006      start_initialization 000F                ___latbits 0002  
+                  _myIsr 07DD                    pclath 000A                    status 0003  
+                  wtemp0 007E          __initialization 07FC             __end_of_main 07C1  
+           __end_of_init 07DD                   ??_main 0073                   ??_init 0073  
+                 ?_myIsr 0071                   _INTCON 000B                   saved_w 007E  
+__end_of__initialization 07FC           __pcstackCOMMON 0071            __end_of_myIsr 07FC  
+                ??_myIsr 0071               __pmaintext 07B6               __pintentry 0004  
+                __ptext1 07C1                  __ptext2 07DD     end_of_initialization 07FC  
+              _PORTBbits 0006      start_initialization 07FC                ___latbits 0002  
       interrupt_function 0004               _INTCONbits 000B                 intlevel1 0000  
              _OPTION_REG 0081  
