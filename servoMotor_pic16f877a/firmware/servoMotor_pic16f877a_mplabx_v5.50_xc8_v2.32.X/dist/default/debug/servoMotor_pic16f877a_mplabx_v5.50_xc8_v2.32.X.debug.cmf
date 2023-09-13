@@ -11,12 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-idloc IDLOC 5 2000 2000 4 2 1
-reset_vec CODE 0 0 0 3 2 1
-end_init CODE 0 C C 3 2 1
-config CONFIG 4 2007 2007 1 2 1
-$dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+$dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 cinit CODE 0 F F 6 2 1
 idloc IDLOC 5 2000 2000 4 2 1
 text1 CODE 0 EB EB 34 2 1
@@ -26,6 +21,11 @@ maintext CODE 0 82 82 69 2 1
 cstackCOMMON COMMON 1 74 74 4 1 1
 intentry CODE 0 4 4 8 2 1
 bssCOMMON COMMON 1 78 78 2 1 1
+config CONFIG 4 2007 2007 1 2 1
+$C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+idloc IDLOC 5 2000 2000 4 2 1
+reset_vec CODE 0 0 0 3 2 1
+end_init CODE 0 C C 3 2 1
 config CONFIG 4 2007 2007 1 2 1
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -70,14 +70,14 @@ STRING 11F-1FFF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-F cinit CODE >404:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-F cinit CODE >407:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-F cinit CODE >418:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-10 cinit CODE >419:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-11 cinit CODE >425:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-11 cinit CODE >427:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
-12 cinit CODE >428:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_1.s
+$dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+F cinit CODE >404:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+F cinit CODE >407:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+F cinit CODE >418:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+10 cinit CODE >419:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+11 cinit CODE >425:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+11 cinit CODE >427:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
+12 cinit CODE >428:C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_1.s
 4 intentry CODE >16:C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
 15 text2 CODE >16:C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
 15 text2 CODE >18:C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\servoMotor_pic16f877a\firmware\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X\main.c
@@ -168,7 +168,7 @@ E4 maintext CODE >153:C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\servoMot
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 2 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+___latbits 2 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Hspace_0 11F 0 ABS 0 - -
 __Hspace_1 7A 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
@@ -177,35 +177,35 @@ __Hspace_4 400F 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __L__absolute__ 0 0 ABS 0 __absolute__ -
 __Hstrings 0 0 ABS 0 strings -
-_TMR0 1 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TMR1 E 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-_cont 78 0 COMMON 1 bssCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_init 1D6 0 CODE 0 text1 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_main 104 0 CODE 0 maintext dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-btemp 7E 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-start 18 0 CODE 0 init C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
+_TMR0 1 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TMR1 E 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+___sp 0 0 STACK 2 stack C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+_cont 78 0 COMMON 1 bssCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_init 1D6 0 CODE 0 text1 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_main 104 0 CODE 0 maintext dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+btemp 7E 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+start 18 0 CODE 0 init C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __LnvCOMMON 0 0 ABS 0 nvCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
-wtemp0 7E 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+wtemp0 7E 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 __Lmaintext 0 0 ABS 0 maintext -
-_INTCON B 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_OPTION_REG 81 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-___stacklo 0 0 ABS 0 - C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
+_INTCON B 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_OPTION_REG 81 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+___stackhi 0 0 ABS 0 - C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+___stacklo 0 0 ABS 0 - C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
 __HnvCOMMON 0 0 ABS 0 nvCOMMON -
-start_initialization 1E 0 CODE 0 cinit dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
+start_initialization 1E 0 CODE 0 cinit dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+___int_sp 0 0 STACK 2 stack C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -223,9 +223,9 @@ __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 1E 0 CODE 0 cinit -
 __Lidloc 0 0 IDLOC 5 idloc -
 __Lstack 0 0 STACK 2 stack -
-_PORTBbits 6 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTCbits 7 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_INTCONbits B 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+_PORTBbits 6 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTCbits 7 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_INTCONbits B 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 18 0 CODE 0 init -
@@ -246,12 +246,12 @@ __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 11F 0 ABS 0 - -
 __S1 7A 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-__pnvCOMMON 70 0 COMMON 1 nvCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-saved_w 7E 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__pnvCOMMON 70 0 COMMON 1 nvCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+saved_w 7E 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\NOTEBOOK\AppData\Local\Temp\xcAs7as.\driver_tmp_12.o
-_PIE1bits 8C 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__pmaintext 104 0 CODE 0 maintext dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\NOTEBOOK\AppData\Local\Temp\xcAsbuk.\driver_tmp_12.o
+_PIE1bits 8C 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__pmaintext 104 0 CODE 0 maintext dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __Lspace_0 0 0 ABS 0 - -
@@ -259,47 +259,47 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PIR1bits C 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__pbssCOMMON 78 0 COMMON 1 bssCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PIR1bits C 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Lend_init 18 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 22 0 CODE 0 cinit dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+end_of_initialization 22 0 CODE 0 cinit dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Hintentry 18 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 1D6 0 CODE 0 text1 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__ptext2 2A 0 CODE 0 text2 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__ptext1 1D6 0 CODE 0 text1 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__ptext2 2A 0 CODE 0 text2 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __H__absolute__ 0 0 ABS 0 __absolute__ -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 22 0 CODE 0 cinit dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__end_of__initialization 22 0 CODE 0 cinit dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 74 0 COMMON 1 cstackCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__pcstackCOMMON 74 0 COMMON 1 cstackCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_init 23E 0 CODE 0 text1 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__end_of_main 1D6 0 CODE 0 maintext dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTA 5 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTB 6 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTC 7 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTD 8 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_PORTE 9 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__end_of_myIsr 104 0 CODE 0 text2 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_T1CON 10 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TRISA 85 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TRISB 86 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TRISC 87 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TRISD 88 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_TRISE 89 0 ABS 0 - dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+__end_of_init 23E 0 CODE 0 text1 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__end_of_main 1D6 0 CODE 0 maintext dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTA 5 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTB 6 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTC 7 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTD 8 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_PORTE 9 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__end_of_myIsr 104 0 CODE 0 text2 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_T1CON 10 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TRISA 85 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TRISB 86 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TRISC 87 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TRISD 88 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_TRISE 89 0 ABS 0 - dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-interrupt_function 8 0 CODE 0 intentry dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_duty1 72 0 COMMON 1 nvCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_duty2 70 0 COMMON 1 nvCOMMON dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-_myIsr 2A 0 CODE 0 text2 dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__pintentry 8 0 CODE 0 intentry dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
-__initialization 1E 0 CODE 0 cinit dist/default/production\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.production.o
+interrupt_function 8 0 CODE 0 intentry dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_duty1 72 0 COMMON 1 nvCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_duty2 70 0 COMMON 1 nvCOMMON dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+_myIsr 2A 0 CODE 0 text2 dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__pintentry 8 0 CODE 0 intentry dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
+__initialization 1E 0 CODE 0 cinit dist/default/debug\servoMotor_pic16f877a_mplabx_v5.50_xc8_v2.32.X.debug.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
