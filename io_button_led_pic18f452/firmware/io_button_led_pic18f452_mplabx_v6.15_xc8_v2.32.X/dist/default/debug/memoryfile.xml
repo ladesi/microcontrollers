@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <executable name="dist/default/debug\io_button_led_pic18f452_mplabx_v6.15_xc8_v2.32.X.debug.hex">
+    <memory name="program">
+      <units>bytes</units>
+      <length>32768</length>
+      <used>144</used>
+      <free>32624</free>
+    </memory>
+    <memory name="data">
+      <units>bytes</units>
+      <length>1536</length>
+      <used>2</used>
+      <free>1534</free>
+    </memory>
+  </executable>
+</project>

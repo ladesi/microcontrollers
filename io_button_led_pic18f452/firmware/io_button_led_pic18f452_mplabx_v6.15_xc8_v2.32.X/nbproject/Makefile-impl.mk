@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=io_button_led_pic18f4520_mplabx_v6.15_xc8_v2.32.X.X
+PROJECTNAME=io_button_led_pic18f452_mplabx_v6.15_xc8_v2.32.X
 
 # Active Configuration
 DEFAULTCONF=default
