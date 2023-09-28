@@ -1,8 +1,10 @@
-# Microcontrollers
-Small samples with microcontrollers and peripherals
+# Microcontrollers 💻
+
+## Description
+Small samples with microcontrollers and peripherals.
 
 ## Projects
-
+#### PIC16F877A
 - Initial (Hello World)
 - C Coding (PIC XC8 Compiler)
 - Digital IO (Button and Led)
@@ -27,3 +29,6 @@ Small samples with microcontrollers and peripherals
 - Compare Module
 - Internal Comparators
 - SPI Communication (Master and Slave)
+
+#### PIC18F4520
+- Digital IO (Button and Led)
