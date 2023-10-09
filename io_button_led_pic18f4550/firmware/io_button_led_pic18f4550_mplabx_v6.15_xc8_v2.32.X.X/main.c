@@ -1,8 +1,8 @@
 /*
- * PIC18F452 Samples
+ * PIC18F4550 Samples
  * Sample 01: IO ports
  * Author: Luan Gomes Magalhães Lima
- * Last Update: 2023/09/28
+ * Last Update: 2023/10/09
  */
 
 // LIBRARIES INCLUDE
@@ -71,8 +71,8 @@ void main(void)
     while(1)
     {
         /* Choose one of the functions below*/
-        //blink_led();
-        blink_if_button();
+        blink_led();
+        //blink_if_button();
         //button_trigger();
     }
     

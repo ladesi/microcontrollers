@@ -1,7 +1,7 @@
 [p GLOBOPT AUTOSTATIC IEEE_FLT IEEE_DBL LFSROK EMI_WORD ]
 [d version 1.1 ]
 [d edition pro ]
-[d chip 18F452 ]
+[d chip 18F4550 ]
 [d frameptr 4065 ]
 "4 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\fleq.c
 [v ___fleq __fleq `(b  1 e 0 0 ]
@@ -27,19 +27,19 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.41\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"16 C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\io_button_led_pic18f452\firmware\io_button_led_pic18f452_mplabx_v6.15_xc8_v2.32.X\main.c
+"16 C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\io_button_led_pic18f4550\firmware\io_button_led_pic18f4550_mplabx_v6.15_xc8_v2.32.X.X\main.c
 [v _init init `(v  1 e 1 0 ]
-"40
-[v _blink_if_button blink_if_button `(v  1 e 1 0 ]
+"32
+[v _blink_led blink_led `(v  1 e 1 0 ]
 "65
 [v _main main `(v  1 e 1 0 ]
-"52 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f452.h
+"2314 C:/Program Files/Microchip/MPLABX/v6.15/packs/Microchip/PIC18Fxxxx_DFP/1.4.151/xc8\pic\include\proc\pic18f4550.h
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
-"197
+"2453
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-"322
+"2563
 [v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-"489
+"2705
 [v _PORTD PORTD `VEuc  1 e 1 @3971 ]
 [s S34 . 1 `uc 1 RD0 1 0 :1:0 
 `uc 1 RD1 1 0 :1:1 
@@ -50,34 +50,34 @@
 `uc 1 RD6 1 0 :1:6 
 `uc 1 RD7 1 0 :1:7 
 ]
-"520
-[s S43 . 1 `uc 1 PSP0 1 0 :1:0 
-`uc 1 PSP1 1 0 :1:1 
-`uc 1 PSP2 1 0 :1:2 
-`uc 1 PSP3 1 0 :1:3 
-`uc 1 PSP4 1 0 :1:4 
-`uc 1 PSP5 1 0 :1:5 
-`uc 1 PSP6 1 0 :1:6 
-`uc 1 PSP7 1 0 :1:7 
+"2736
+[s S43 . 1 `uc 1 SPP0 1 0 :1:0 
+`uc 1 SPP1 1 0 :1:1 
+`uc 1 SPP2 1 0 :1:2 
+`uc 1 SPP3 1 0 :1:3 
+`uc 1 SPP4 1 0 :1:4 
+`uc 1 SPP5 1 0 :1:5 
+`uc 1 SPP6 1 0 :1:6 
+`uc 1 SPP7 1 0 :1:7 
 ]
 [s S52 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 SS2 1 0 :1:7 
 ]
 [u S55 . 1 `S34 1 . 1 0 `S43 1 . 1 0 `S52 1 . 1 0 ]
 [v _PORTDbits PORTDbits `VES55  1 e 1 @3971 ]
-"610
+"2826
 [v _PORTE PORTE `VEuc  1 e 1 @3972 ]
-"1210
+"3427
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
-"1408
+"3625
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
-"1648
+"3847
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
-"1888
+"4001
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-"2110
+"4223
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-"65 C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\io_button_led_pic18f452\firmware\io_button_led_pic18f452_mplabx_v6.15_xc8_v2.32.X\main.c
+"65 C:\Users\NOTEBOOK\MPLABXProjects\microcontrollers\io_button_led_pic18f4550\firmware\io_button_led_pic18f4550_mplabx_v6.15_xc8_v2.32.X.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "80
@@ -87,8 +87,8 @@
 {
 "30
 } 0
-"40
-[v _blink_if_button blink_if_button `(v  1 e 1 0 ]
+"32
+[v _blink_led blink_led `(v  1 e 1 0 ]
 {
-"53
+"38
 } 0

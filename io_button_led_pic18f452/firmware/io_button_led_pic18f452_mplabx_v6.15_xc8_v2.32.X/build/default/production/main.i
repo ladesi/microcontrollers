@@ -4017,8 +4017,8 @@ void main(void)
     while(1)
     {
 
-        blink_led();
 
+        blink_if_button();
 
     }
 

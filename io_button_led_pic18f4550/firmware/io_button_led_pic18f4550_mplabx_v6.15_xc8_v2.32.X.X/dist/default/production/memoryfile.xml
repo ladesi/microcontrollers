@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\io_button_led_pic18f452_mplabx_v6.15_xc8_v2.32.X.production.hex">
+  <executable name="dist/default/production\io_button_led_pic18f4550_mplabx_v6.15_xc8_v2.32.X.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>172</used>
-      <free>32596</free>
+      <used>122</used>
+      <free>32646</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
-      <length>1536</length>
+      <length>2048</length>
       <used>2</used>
-      <free>1534</free>
+      <free>2046</free>
     </memory>
   </executable>
 </project>
