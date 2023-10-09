@@ -35,3 +35,6 @@ Small samples with microcontrollers and peripherals.
 
 #### PIC18F452
 - Digital IO (Button and Led)
+
+#### PIC18F4550
+- Digital IO (Button and Led)
