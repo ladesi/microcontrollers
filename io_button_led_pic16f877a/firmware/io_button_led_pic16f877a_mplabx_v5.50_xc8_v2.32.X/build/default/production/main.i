@@ -1747,11 +1747,11 @@ void init(void)
     PORTA = 0b00000000;
     PORTB = 0b00000000;
     PORTC = 0b00000000;
-    TRISD = 0b00000000;
+    TRISD = 0b00000001;
     PORTE = 0b00000000;
 
     TRISA = 0b00000000;
-    TRISB = 0b00000001;
+    TRISB = 0b00000000;
     TRISC = 0b00000000;
     PORTD = 0b00000000;
     TRISE = 0b00000000;
@@ -1759,34 +1759,34 @@ void init(void)
 
 void blink_led(void)
 {
-    PORTBbits.RB1 = 1;
+    PORTDbits.RD1 = 1;
     _delay((unsigned long)((500)*(20000000/4000.0)));
-    PORTBbits.RB1 = 0;
+    PORTDbits.RD1 = 0;
     _delay((unsigned long)((500)*(20000000/4000.0)));
 }
 
 void blink_if_button(void)
 {
-    if(!PORTBbits.RB0)
+    if(!PORTDbits.RD0)
     {
-        PORTBbits.RB1 = 1;
+        PORTDbits.RD1 = 1;
         _delay((unsigned long)((500)*(20000000/4000.0)));
-        PORTBbits.RB1 = 0;
+        PORTDbits.RD1 = 0;
         _delay((unsigned long)((500)*(20000000/4000.0)));
     }
     else
     {
-        PORTBbits.RB1 = 0;
+        PORTDbits.RD1 = 0;
     }
 }
 
 void button_trigger(void)
 {
-    if(!PORTBbits.RB0)
+    if(!PORTDbits.RD0)
     {
-        PORTBbits.RB1 = 1;
+        PORTDbits.RD1 = 1;
         _delay((unsigned long)((2000)*(20000000/4000.0)));
-        PORTBbits.RB1 = 0;
+        PORTDbits.RD1 = 0;
     }
 }
 

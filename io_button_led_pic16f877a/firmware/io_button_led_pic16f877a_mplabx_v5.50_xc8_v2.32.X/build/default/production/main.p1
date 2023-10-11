@@ -29,17 +29,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1561
 [; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 1561: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
-"222
-[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 222:     struct {
-[s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S8 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
-"221
-[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 221: typedef union {
-[u S7 `S8 1 ]
-[n S7 . . ]
-"233
-[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 233: extern volatile PORTBbits_t PORTBbits __attribute__((address(0x006)));
-[v _PORTBbits `VS7 ~T0 @X0 0 e@6 ]
+"346
+[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 346:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"345
+[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 345: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"357
+[; ;C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f877a.h: 357: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
 [v F842 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:/Users/NOTEBOOK/.mchp_packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF842 ~T0 @X0 0 e ]
@@ -259,8 +259,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 23:     PORTC = 0b00000000;
 [e = _PORTC -> -> 0 `i `uc ]
 "24
-[; ;main.c: 24:     TRISD = 0b00000000;
-[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 24:     TRISD = 0b00000001;
+[e = _TRISD -> -> 1 `i `uc ]
 "25
 [; ;main.c: 25:     PORTE = 0b00000000;
 [e = _PORTE -> -> 0 `i `uc ]
@@ -268,8 +268,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 27:     TRISA = 0b00000000;
 [e = _TRISA -> -> 0 `i `uc ]
 "28
-[; ;main.c: 28:     TRISB = 0b00000001;
-[e = _TRISB -> -> 1 `i `uc ]
+[; ;main.c: 28:     TRISB = 0b00000000;
+[e = _TRISB -> -> 0 `i `uc ]
 "29
 [; ;main.c: 29:     TRISC = 0b00000000;
 [e = _TRISC -> -> 0 `i `uc ]
@@ -292,14 +292,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _blink_led ]
 [f ]
 "36
-[; ;main.c: 36:     PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 36:     PORTDbits.RD1 = 1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "37
 [; ;main.c: 37:     _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "38
-[; ;main.c: 38:     PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 38:     PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "39
 [; ;main.c: 39:     _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
@@ -316,20 +316,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _blink_if_button ]
 [f ]
 "44
-[; ;main.c: 44:     if(!PORTBbits.RB0)
-[e $ ! ! != -> . . _PORTBbits 0 0 `i -> 0 `i 98  ]
+[; ;main.c: 44:     if(!PORTDbits.RD0)
+[e $ ! ! != -> . . _PORTDbits 0 0 `i -> 0 `i 98  ]
 "45
 [; ;main.c: 45:     {
 {
 "46
-[; ;main.c: 46:         PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 46:         PORTDbits.RD1 = 1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "47
 [; ;main.c: 47:         _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "48
-[; ;main.c: 48:         PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 48:         PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "49
 [; ;main.c: 49:         _delay((unsigned long)((500)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 500 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
@@ -344,8 +344,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 52:     {
 {
 "53
-[; ;main.c: 53:         PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 53:         PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "54
 [; ;main.c: 54:     }
 }
@@ -363,20 +363,20 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _button_trigger ]
 [f ]
 "59
-[; ;main.c: 59:     if(!PORTBbits.RB0)
-[e $ ! ! != -> . . _PORTBbits 0 0 `i -> 0 `i 101  ]
+[; ;main.c: 59:     if(!PORTDbits.RD0)
+[e $ ! ! != -> . . _PORTDbits 0 0 `i -> 0 `i 101  ]
 "60
 [; ;main.c: 60:     {
 {
 "61
-[; ;main.c: 61:         PORTBbits.RB1 = 1;
-[e = . . _PORTBbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 61:         PORTDbits.RD1 = 1;
+[e = . . _PORTDbits 0 1 -> -> 1 `i `uc ]
 "62
 [; ;main.c: 62:         _delay((unsigned long)((2000)*(20000000/4000.0)));
 [e ( __delay (1 -> * -> -> 2000 `i `d / -> -> 20000000 `l `d .4000.0 `ul ]
 "63
-[; ;main.c: 63:         PORTBbits.RB1 = 0;
-[e = . . _PORTBbits 0 1 -> -> 0 `i `uc ]
+[; ;main.c: 63:         PORTDbits.RD1 = 0;
+[e = . . _PORTDbits 0 1 -> -> 0 `i `uc ]
 "64
 [; ;main.c: 64:     }
 }

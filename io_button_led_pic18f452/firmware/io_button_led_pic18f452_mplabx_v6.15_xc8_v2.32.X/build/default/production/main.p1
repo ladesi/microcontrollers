@@ -652,9 +652,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72
 [; ;main.c: 72:     {
 {
-"75
-[; ;main.c: 75:         blink_if_button();
-[e ( _blink_if_button ..  ]
+"74
+[; ;main.c: 74:         blink_led();
+[e ( _blink_led ..  ]
 "77
 [; ;main.c: 77:     }
 }

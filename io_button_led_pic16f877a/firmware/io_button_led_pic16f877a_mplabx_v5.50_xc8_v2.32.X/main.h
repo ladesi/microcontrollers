@@ -31,8 +31,8 @@
 
 #define _XTAL_FREQ 20000000     // Processor frequency for delay functions
 
-#define bot1 !PORTBbits.RB0     // button at RB0 pin
-#define led1 PORTBbits.RB1      // led at RB1 pin
+#define bot1 !PORTDbits.RD0     // button at RB0 pin
+#define led1 PORTDbits.RD1      // led at RB1 pin
 
 // FUNCTIONS
 

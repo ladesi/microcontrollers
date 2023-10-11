@@ -71,8 +71,8 @@ void main(void)
     while(1)
     {
         /* Choose one of the functions below*/
-        //blink_led();
-        blink_if_button();
+        blink_led();
+        //blink_if_button();
         //button_trigger();
     }
     

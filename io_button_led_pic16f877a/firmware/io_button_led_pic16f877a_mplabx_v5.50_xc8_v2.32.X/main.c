@@ -21,11 +21,11 @@ void init(void)
     PORTA = 0b00000000;
     PORTB = 0b00000000;
     PORTC = 0b00000000;
-    TRISD = 0b00000000;
+    TRISD = 0b00000001; // set RD0 as input and RD1 as output
     PORTE = 0b00000000;
 
     TRISA = 0b00000000;
-    TRISB = 0b00000001;
+    TRISB = 0b00000000;
     TRISC = 0b00000000;
     PORTD = 0b00000000;
     TRISE = 0b00000000;

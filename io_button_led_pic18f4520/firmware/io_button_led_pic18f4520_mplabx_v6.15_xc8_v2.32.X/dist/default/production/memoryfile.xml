@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\io_button_led_pic18f4520_mplabx_v6.15_xc8_v2.32.X.X.production.hex">
+  <executable name="dist/default/production\io_button_led_pic18f4520_mplabx_v6.15_xc8_v2.32.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
